@@ -1,0 +1,490 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f37cd01bc60, pid=13039, tid=0x00007f37a171f6c0
+#
+# JRE version:  (8.0_265-b01) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.265-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  0x00007f37cd01bc60
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f379c010000):  JavaThread "Unknown thread" [_thread_in_Java, id=13040, stack(0x00007f37a1620000,0x00007f37a1720000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f37cd01bc60
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000000000000004c, RCX=0x0000000000000050, RDX=0x0000000000000000
+RSP=0x00007f37a171e848, RBP=0x00007f37a171e888, RSI=0x00007f37a171e7f8, RDI=0x00007f379c010000
+R8 =0x00007f378c818080, R9 =0x0000000000000028, R10=0x00007f37a27a9740, R11=0x0000000000000097
+R12=0x0000000000000000, R13=0x00007f378c832293, R14=0x00007f37a171e8a0, R15=0x00007f379c010000
+RIP=0x00007f37cd01bc60, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000014
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f37a171e848)
+0x00007f37a171e848:   00007f37a171e848 00007f378c832290
+0x00007f37a171e858:   00007f37a171e8a0 00007f378c8b5eb8
+0x00007f37a171e868:   0000000000000000 00007f378c8322a8
+0x00007f37a171e878:   0000000000000000 00007f37a171e8a0
+0x00007f37a171e888:   00007f37a171e8e8 00007f378d007ffd
+0x00007f37a171e898:   0000000000000000 00000000a24057d0
+0x00007f37a171e8a8:   00007f37a171e8a8 00007f378c831c79
+0x00007f37a171e8b8:   00007f37a171e8f8 00007f378c8b5eb8
+0x00007f37a171e8c8:   0000000000000000 00007f378c831c88
+0x00007f37a171e8d8:   00007f37a171e8a0 00007f37a171e8f8
+0x00007f37a171e8e8:   00007f37a171e948 00007f378d007d80
+0x00007f37a171e8f8:   00000000a24057d0 00000000a2405838
+0x00007f37a171e908:   00007f37a171e908 00007f378c831b0a
+0x00007f37a171e918:   00007f37a171e968 00007f378c8b5eb8
+0x00007f37a171e928:   0000000000000000 00007f378c831b20
+0x00007f37a171e938:   00007f37a171e8f8 00007f37a171e958
+0x00007f37a171e948:   00007f37a171e9d0 00007f378d0004e7
+0x00007f37a171e958:   00000000a2405868 00000000a24057d0
+0x00007f37a171e968:   00000000a2405838 0000000000001fa0
+0x00007f37a171e978:   00007f37a171ea80 00007f379c010000
+0x00007f37a171e988:   00007f37a171ebc0 00007f379c010000
+0x00007f37a171e998:   00007f378c831b20 00007f37a171ea80
+0x00007f37a171e9a8:   00007f37a171ecd8 00007f370000000a
+0x00007f37a171e9b8:   00007f378c831b20 00007f378d013340
+0x00007f37a171e9c8:   00007f37a171ebc8 00007f37a171eaf0
+0x00007f37a171e9d8:   00007f37a1e534be 0000000000000003
+0x00007f37a171e9e8:   00007f379c010000 00007f37a171ea10
+0x00007f37a171e9f8:   00007f379c010000 00007f378c831b20
+0x00007f37a171ea08:   0000000100000003 00007f37a171ea40
+0x00007f37a171ea18:   00007f370000000a 00007f378d013340
+0x00007f37a171ea28:   00007f379c002b00 00007f378d00045f
+0x00007f37a171ea38:   00007f37a171ecd0 00007f379c010000 
+
+Instructions: (pc=0x00007f37cd01bc60)
+0x00007f37cd01bc40:   
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xb]
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x000000000000004c is an unknown value
+RCX=0x0000000000000050 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007f37a171e848 is pointing into the stack for thread: 0x00007f379c010000
+RBP=0x00007f37a171e888 is pointing into the stack for thread: 0x00007f379c010000
+RSI=0x00007f37a171e7f8 is pointing into the stack for thread: 0x00007f379c010000
+RDI=0x00007f379c010000 is a thread
+R8 =0x00007f378c818080 is pointing into metadata
+R9 =0x0000000000000028 is an unknown value
+R10=0x00007f37a27a9740: <offset 0xfa9740> in /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so at 0x00007f37a1800000
+R11=0x0000000000000097 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x00007f378c832293 is pointing into metadata
+R14=0x00007f37a171e8a0 is pointing into the stack for thread: 0x00007f379c010000
+R15=0x00007f379c010000 is a thread
+
+
+Stack: [0x00007f37a1620000,0x00007f37a1720000],  sp=0x00007f37a171e848,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x00007f37cd01bc60
+j  java.lang.ThreadGroup.checkParentAccess(Ljava/lang/ThreadGroup;)Ljava/lang/Void;+1
+j  java.lang.ThreadGroup.<init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V+2
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x6534be]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xf2e
+V  [libjvm.so+0x6512ec]  JavaCalls::call_special(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x25c
+V  [libjvm.so+0x651a01]  JavaCalls::call_special(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Handle, Handle, Thread*)+0x71
+V  [libjvm.so+0xa3075f]  Threads::create_vm(JavaVMInitArgs*, bool*)+0xd6f
+V  [libjvm.so+0x6c5ba1]  JNI_CreateJavaVM+0x51
+C  [libjli.so+0x79f4]  JavaMain+0x94
+C  [libc.so.6+0x891f5]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007f379c010000 JavaThread "Unknown thread" [_thread_in_Java, id=13040, stack(0x00007f37a1620000,0x00007f37a1720000)]
+
+Other Threads:
+  0x00007f379c078800 VMThread [stack: 0x00007f37a025c000,0x00007f37a035c000] [id=13041]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000a2400000, size: 1500 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ def new generation   total 57152K, used 1016K [0x00000000a2400000, 0x00000000a6200000, 0x00000000c1800000)
+  eden space 50816K,   2% used [0x00000000a2400000, 0x00000000a24fe150, 0x00000000a55a0000)
+  from space 6336K,   0% used [0x00000000a55a0000, 0x00000000a55a0000, 0x00000000a5bd0000)
+  to   space 6336K,   0% used [0x00000000a5bd0000, 0x00000000a5bd0000, 0x00000000a6200000)
+ tenured generation   total 126976K, used 0K [0x00000000c1800000, 0x00000000c9400000, 0x0000000100000000)
+   the space 126976K,   0% used [0x00000000c1800000, 0x00000000c1800000, 0x00000000c1800200, 0x00000000c9400000)
+ Metaspace       used 808K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 79K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00007f37a0551000,0x00007f37a0840000] byte_map_base: 0x00007f37a003f000
+
+Polling page: 0x00007f37a2c25000
+
+CodeCache: size=245760Kb used=391Kb max_used=391Kb free=245368Kb
+ bounds [0x00007f378d000000, 0x00007f378d270000, 0x00007f379c000000]
+ total_blobs=73 nmethods=0 adapters=48
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.012 loading class java/lang/NullPointerException done
+Event: 0.012 loading class java/lang/ArithmeticException
+Event: 0.012 loading class java/lang/ArithmeticException done
+Event: 0.012 Thread 0x00007f379c010000 Thread added: 0x00007f379c010000
+Event: 0.013 loading class java/io/ObjectStreamField
+Event: 0.013 loading class java/io/ObjectStreamField done
+Event: 0.013 loading class java/lang/String$CaseInsensitiveComparator
+Event: 0.013 loading class java/util/Comparator
+Event: 0.013 loading class java/util/Comparator done
+Event: 0.013 loading class java/lang/String$CaseInsensitiveComparator done
+
+
+Dynamic libraries:
+a2400000-a6200000 rw-p 00000000 00:00 0 
+a6200000-c1800000 ---p 00000000 00:00 0 
+c1800000-c9400000 rw-p 00000000 00:00 0 
+c9400000-100000000 ---p 00000000 00:00 0 
+100000000-100060000 rw-p 00000000 00:00 0 
+100060000-140000000 ---p 00000000 00:00 0 
+56150c600000-56150c601000 r-xp 00000000 08:03 3340838                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/bin/java
+56150c800000-56150c801000 r--p 00000000 08:03 3340838                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/bin/java
+56150c801000-56150c802000 rw-p 00001000 08:03 3340838                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/bin/java
+56154b11f000-56154b140000 rw-p 00000000 00:00 0                          [heap]
+7f3788000000-7f3788021000 rw-p 00000000 00:00 0 
+7f3788021000-7f378c000000 ---p 00000000 00:00 0 
+7f378c65e000-7f378cc00000 rw-p 00000000 00:00 0 
+7f378cc00000-7f378d000000 ---p 00000000 00:00 0 
+7f378d000000-7f378d270000 rwxp 00000000 00:00 0 
+7f378d270000-7f379c000000 ---p 00000000 00:00 0 
+7f379c000000-7f379c0a3000 rw-p 00000000 00:00 0 
+7f379c0a3000-7f37a0000000 ---p 00000000 00:00 0 
+7f37a0166000-7f37a025b000 rw-p 00000000 00:00 0 
+7f37a025b000-7f37a025c000 ---p 00000000 00:00 0 
+7f37a025c000-7f37a035c000 rw-p 00000000 00:00 0 
+7f37a035c000-7f37a039b000 rw-p 00000000 00:00 0 
+7f37a039b000-7f37a0551000 ---p 00000000 00:00 0 
+7f37a0551000-7f37a0570000 rw-p 00000000 00:00 0 
+7f37a0570000-7f37a064b000 ---p 00000000 00:00 0 
+7f37a064b000-7f37a0689000 rw-p 00000000 00:00 0 
+7f37a0689000-7f37a083f000 ---p 00000000 00:00 0 
+7f37a083f000-7f37a084a000 rw-p 00000000 00:00 0 
+7f37a084a000-7f37a0c00000 ---p 00000000 00:00 0 
+7f37a0c00000-7f37a0c1b000 r-xp 00000000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7f37a0c1b000-7f37a0e1a000 ---p 0001b000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7f37a0e1a000-7f37a0e1b000 r--p 0001a000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7f37a0e1b000-7f37a0e1c000 rw-p 0001b000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7f37a0e2e000-7f37a1000000 r--s 03ca8000 08:03 3340658                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/rt.jar
+7f37a1000000-7f37a1029000 r-xp 00000000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7f37a1029000-7f37a1228000 ---p 00029000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7f37a1228000-7f37a1229000 r--p 00028000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7f37a1229000-7f37a122b000 rw-p 00029000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7f37a12e1000-7f37a1400000 rw-p 00000000 00:00 0 
+7f37a1400000-7f37a1410000 r-xp 00000000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7f37a1410000-7f37a160f000 ---p 00010000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7f37a160f000-7f37a1611000 r--p 0000f000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7f37a1611000-7f37a1612000 rw-p 00011000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7f37a161f000-7f37a1620000 ---p 00000000 00:00 0 
+7f37a1620000-7f37a1623000 ---p 00000000 00:00 0 
+7f37a1623000-7f37a1720000 rw-p 00000000 00:00 0 
+7f37a1720000-7f37a1730000 r--p 00000000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7f37a1730000-7f37a17a4000 r-xp 00010000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7f37a17a4000-7f37a17fe000 r--p 00084000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7f37a17fe000-7f37a17ff000 r--p 000dd000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7f37a17ff000-7f37a1800000 rw-p 000de000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7f37a1800000-7f37a24b5000 r-xp 00000000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f37a24b5000-7f37a26b4000 ---p 00cb5000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f37a26b4000-7f37a2757000 r--p 00cb4000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f37a2757000-7f37a2780000 rw-p 00d57000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f37a2780000-7f37a27c8000 rw-p 00000000 00:00 0 
+7f37a27d5000-7f37a27e8000 r--s 00346000 08:03 3340857                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/resources.jar
+7f37a27e8000-7f37a2810000 rw-p 00000000 00:00 0 
+7f37a2810000-7f37a2818000 rw-s 00000000 00:1e 45                         /tmp/hsperfdata_civ/13039
+7f37a2818000-7f37a2819000 r--p 00000000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7f37a2819000-7f37a281a000 r-xp 00001000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7f37a281a000-7f37a281b000 r--p 00002000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7f37a281b000-7f37a281c000 r--p 00002000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7f37a281c000-7f37a281d000 rw-p 00003000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7f37a281d000-7f37a281f000 rw-p 00000000 00:00 0 
+7f37a281f000-7f37a2845000 r--p 00000000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f37a2845000-7f37a299a000 r-xp 00026000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f37a299a000-7f37a29ed000 r--p 0017b000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f37a29ed000-7f37a29f1000 r--p 001ce000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f37a29f1000-7f37a29f3000 rw-p 001d2000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f37a29f3000-7f37a2a00000 rw-p 00000000 00:00 0 
+7f37a2a00000-7f37a2a16000 r-xp 00000000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f37a2a16000-7f37a2c15000 ---p 00016000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f37a2c15000-7f37a2c16000 r--p 00015000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f37a2c16000-7f37a2c17000 rw-p 00016000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f37a2c17000-7f37a2c18000 r--p 00000000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f37a2c18000-7f37a2c19000 r-xp 00001000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f37a2c19000-7f37a2c1a000 r--p 00002000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f37a2c1a000-7f37a2c1b000 r--p 00002000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f37a2c1b000-7f37a2c1c000 rw-p 00003000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f37a2c1c000-7f37a2c1d000 r--p 00000000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f37a2c1d000-7f37a2c1e000 r-xp 00001000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f37a2c1e000-7f37a2c1f000 r--p 00002000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f37a2c1f000-7f37a2c20000 r--p 00002000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f37a2c20000-7f37a2c21000 rw-p 00003000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f37a2c24000-7f37a2c25000 rw-p 00000000 00:00 0 
+7f37a2c25000-7f37a2c26000 r--p 00000000 00:00 0 
+7f37a2c26000-7f37a2c28000 rw-p 00000000 00:00 0 
+7f37a2c28000-7f37a2c2c000 r--p 00000000 00:00 0                          [vvar]
+7f37a2c2c000-7f37a2c2e000 r-xp 00000000 00:00 0                          [vdso]
+7f37a2c2e000-7f37a2c2f000 r--p 00000000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f37a2c2f000-7f37a2c55000 r-xp 00001000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f37a2c55000-7f37a2c5f000 r--p 00027000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f37a2c5f000-7f37a2c61000 r--p 00031000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f37a2c61000-7f37a2c63000 rw-p 00033000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffe95c66000-7ffe95c8a000 rw-p 00000000 00:00 0                          [stack]
+
+VM Arguments:
+jvm_args: -Xmx1500M -XX:+UseSerialGC 
+java_command: com.altera.sopcmodel.sbtools.sbcatalog.SbCatalog --xml --project-directory= --search-path=/home/civ/rafaelAula2/,/home/civ/rafaelAula2
+java_class_path (initial): /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/Nlview.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/TableLayout.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/appframework-1.03.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/asm-3.1.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/asm-commons-3.1.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/basicmodel.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/binding-2.0.6.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/civ/intelFPGA_lite/20.1/quartus/linux64:/home/civ/intelFPGA_lite/20.1/quartus/adm:/home/civ/intelFPGA_lite/20.1/quartus/linux64:/home/civ/bin:/home/civ/.local/bin:/usr/local/bin:/home/civ/bin:/home/civ/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/civ/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+LD_LIBRARY_PATH=/home/civ/intelFPGA_lite/20.1/quartus/linux64:/home/civ/intelFPGA_lite/20.1/quartus/linux64:
+SHELL=zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa83ff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa83ff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8d60f0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+uname:Linux 6.12.34-0-lts #1-Alpine SMP PREEMPT_DYNAMIC 2025-06-23 13:30:55 x86_64
+libc:glibc 2.36 NPTL 2.36 
+rlimit: STACK 7812k, CORE 0k, NPROC 46646, NOFILE 4096, AS infinity
+load average:1.22 1.04 0.77
+
+/proc/meminfo:
+MemTotal:       12166208 kB
+MemFree:         8617268 kB
+MemAvailable:    9878212 kB
+Buffers:           81724 kB
+Cached:          1778840 kB
+SwapCached:            0 kB
+Active:          2532484 kB
+Inactive:         341972 kB
+Active(anon):    1408172 kB
+Inactive(anon):        0 kB
+Active(file):    1124312 kB
+Inactive(file):   341972 kB
+Unevictable:      312708 kB
+Mlocked:            2852 kB
+SwapTotal:      15624188 kB
+SwapFree:       15624188 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               724 kB
+Writeback:             0 kB
+AnonPages:       1320120 kB
+Mapped:           760564 kB
+Shmem:            392088 kB
+KReclaimable:      67284 kB
+Slab:             120656 kB
+SReclaimable:      67284 kB
+SUnreclaim:        53372 kB
+KernelStack:        9072 kB
+PageTables:        21168 kB
+SecPageTables:      2056 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    21707292 kB
+Committed_AS:    3206704 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       39384 kB
+VmallocChunk:          0 kB
+Percpu:             1168 kB
+AnonHugePages:    110592 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      117696 kB
+DirectMap2M:     3989504 kB
+DirectMap1G:     9437184 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 2989.196
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 2898.308
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 500.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 500.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 12166208k(8617268k free), swap 15624188k(15624188k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.265-b01) for linux-amd64 JRE (1.8.0_265-b01), built on Jul 28 2020 15:17:23 by "jenkins" with gcc 4.8.2 20140120 (Red Hat 4.8.2-15)
+
+time: Fri Jul 18 10:28:36 2025
+timezone: -03
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

@@ -1,0 +1,713 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fa04e7ebcb1, pid=12997, tid=0x00007fa04c1706c0
+#
+# JRE version: OpenJDK Runtime Environment (8.0_265-b01) (build 1.8.0_265-b01)
+# Java VM: OpenJDK 64-Bit Server VM (25.265-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x9ebcb1]  Symbol::decrement_refcount()+0x1
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fa0480c3800):  JavaThread "C1 CompilerThread2" daemon [_thread_in_native, id=13005, stack(0x00007fa04c071000,0x00007fa04c171000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007fa0084fd462
+
+Registers:
+RAX=0x00007fa02874d460, RBX=0x0000000000000195, RCX=0x00007fa04eff3a80, RDX=0x0000000000000001
+RSP=0x00007fa04c16f8e0, RBP=0x00007fa04c16f910, RSI=0x0000000000000001, RDI=0x00007fa0084fd460
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000000
+R12=0x0000000000000ca8, R13=0x00007fa028012280, R14=0x0000000000000000, R15=0x00007fa04c16faa0
+RIP=0x00007fa04e7ebcb1, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fa04c16f8e0)
+0x00007fa04c16f8e0:   00007fa04c16f910 00007fa04e217c58
+0x00007fa04c16f8f0:   00007fa04c16f920 00007fa04ed6bfb0
+0x00007fa04c16f900:   00007fa0480c3800 00007fa04c16faa0
+0x00007fa04c16f910:   00007fa04c16f950 00007fa04e1fa79e
+0x00007fa04c16f920:   00007fa04c16f950 00007fa0480c3800
+0x00007fa04c16f930:   00007fa0481f9e10 00007fa02040d8b0
+0x00007fa04c16f940:   0000000000000000 00007fa04c16faa0
+0x00007fa04c16f950:   00007fa04c16fcc0 00007fa04e288f38
+0x00007fa04c16f960:   00007fa03938af40 00007fa03938cd78
+0x00007fa04c16f970:   00007fa04c16fa00 00007fa04c16f9e0
+0x00007fa04c16f980:   00000000000003d8 00007fa0ffffffff
+0x00007fa04c16f990:   00007fa0480c4378 00007fa0480c3fd0
+0x00007fa04c16f9a0:   00007fa038f10e40 00007fa04c16fa00
+0x00007fa04c16f9b0:   00007fa0480c3f50 00007fa00000037d
+0x00007fa04c16f9c0:   00007fa0480c3f90 00007fa04ed6bfb0
+0x00007fa04c16f9d0:   00007fa04c16fa60 0000000200000000
+0x00007fa04c16f9e0:   00000000006f3ffa 00007fa039167545
+0x00007fa04c16f9f0:   00007fa04c16fa00 00007fa04e76dc09
+0x00007fa04c16fa00:   00007fa04c160001 00000000006f3ffa
+0x00007fa04c16fa10:   000000002afb5e39 0000000000000000
+0x00007fa04c16fa20:   00007fa04c16f9e0 00007fa04e69a488
+0x00007fa04c16fa30:   00007fa0480c3f50 00007fa0480c3f90
+0x00007fa04c16fa40:   00007fa0480c3fd0 00007fa0480c4378
+0x00007fa04c16fa50:   00000000000003d8 0000000000000063
+0x00007fa04c16fa60:   0000000000000000 0000000000000000
+0x00007fa04c16fa70:   00007fa03918cf00 00007fa03918ce10
+0x00007fa04c16fa80:   00007fa03918d2c8 00007fa04eea4f22
+0x00007fa04c16fa90:   00007fa03918cf6e 0000000000000000
+0x00007fa04c16faa0:   00007fa04c16faa8 00007fa000000006
+0x00007fa04c16fab0:   00007fa028012270 00007fa028639440
+0x00007fa04c16fac0:   00007fa02863e680 00007fa028641428
+0x00007fa04c16fad0:   0000000000040298 00000000000005ae 
+
+Instructions: (pc=0x00007fa04e7ebcb1)
+0x00007fa04e7ebc91:   02 e9 39 19 92 ff 66 0f 1f 84 00 00 00 00 00 5d
+0x00007fa04e7ebca1:   c3 66 66 66 66 66 2e 0f 1f 84 00 00 00 00 00 55
+0x00007fa04e7ebcb1:   0f b7 47 02 48 89 e5 66 85 c0 78 13 5d 48 83 c7
+0x00007fa04e7ebcc1:   02 e9 49 19 92 ff 66 0f 1f 84 00 00 00 00 00 5d 
+
+Register to memory mapping:
+
+RAX=0x00007fa02874d460 is an unknown value
+RBX=0x0000000000000195 is an unknown value
+RCX=0x00007fa04eff3a80: __pthread_keys+0 in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007fa04ee1f000
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007fa04c16f8e0 is pointing into the stack for thread: 0x00007fa0480c3800
+RBP=0x00007fa04c16f910 is pointing into the stack for thread: 0x00007fa0480c3800
+RSI=0x0000000000000001 is an unknown value
+RDI=0x00007fa0084fd460 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x0000000000000ca8 is an unknown value
+R13=0x00007fa028012280 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x00007fa04c16faa0 is pointing into the stack for thread: 0x00007fa0480c3800
+
+
+Stack: [0x00007fa04c071000,0x00007fa04c171000],  sp=0x00007fa04c16f8e0,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x9ebcb1]  Symbol::decrement_refcount()+0x1
+V  [libjvm.so+0x3fa79e]  ciEnv::~ciEnv()+0x2e
+V  [libjvm.so+0x488f38]  CompileBroker::invoke_compiler_on_method(CompileTask*)+0x608
+V  [libjvm.so+0x489da8]  CompileBroker::compiler_thread_loop()+0x4a8
+V  [libjvm.so+0xa2d242]  JavaThread::thread_main_inner()+0x1f2
+V  [libjvm.so+0x8d7c72]  java_start(Thread*)+0xf2
+C  [libc.so.6+0x891f5]
+
+
+Current CompileTask:
+C1:    732  893       2       com.altera.sopclibrary.conan.IpxUtils::cardNodeToCardInfo (715 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fa0480d0800 JavaThread "Service Thread" daemon [_thread_blocked, id=13006, stack(0x00007fa038700000,0x00007fa038800000)]
+=>0x00007fa0480c3800 JavaThread "C1 CompilerThread2" daemon [_thread_in_native, id=13005, stack(0x00007fa04c071000,0x00007fa04c171000)]
+  0x00007fa0480c1800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=13004, stack(0x00007fa04c172000,0x00007fa04c272000)]
+  0x00007fa0480bf000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=13003, stack(0x00007fa04c273000,0x00007fa04c373000)]
+  0x00007fa0480bd800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13002, stack(0x00007fa04c373000,0x00007fa04c473000)]
+  0x00007fa048086800 JavaThread "Finalizer" daemon [_thread_blocked, id=13001, stack(0x00007fa04c75c000,0x00007fa04c85c000)]
+  0x00007fa048082000 JavaThread "Reference Handler" daemon [_thread_blocked, id=13000, stack(0x00007fa04c85c000,0x00007fa04c95c000)]
+  0x00007fa048010000 JavaThread "main" [_thread_in_vm, id=12998, stack(0x00007fa04dc20000,0x00007fa04dd20000)]
+
+Other Threads:
+  0x00007fa048078800 VMThread [stack: 0x00007fa04d83c000,0x00007fa04d93c000] [id=12999]
+  0x00007fa0480d3800 WatcherThread [stack: 0x00007fa038600000,0x00007fa038700000] [id=13007]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000a2400000, size: 1500 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ def new generation   total 57152K, used 42860K [0x00000000a2400000, 0x00000000a6200000, 0x00000000c1800000)
+  eden space 50816K,  84% used [0x00000000a2400000, 0x00000000a4ddb1c8, 0x00000000a55a0000)
+  from space 6336K,   0% used [0x00000000a55a0000, 0x00000000a55a0000, 0x00000000a5bd0000)
+  to   space 6336K,   0% used [0x00000000a5bd0000, 0x00000000a5bd0000, 0x00000000a6200000)
+ tenured generation   total 126976K, used 0K [0x00000000c1800000, 0x00000000c9400000, 0x0000000100000000)
+   the space 126976K,   0% used [0x00000000c1800000, 0x00000000c1800000, 0x00000000c1800200, 0x00000000c9400000)
+ Metaspace       used 8677K, capacity 8748K, committed 8960K, reserved 1056768K
+  class space    used 886K, capacity 912K, committed 1024K, reserved 1048576K
+
+Card table byte_map: [0x00007fa04cb51000,0x00007fa04ce40000] byte_map_base: 0x00007fa04c63f000
+
+Polling page: 0x00007fa04f2be000
+
+CodeCache: size=245760Kb used=3638Kb max_used=3638Kb free=242121Kb
+ bounds [0x00007fa039000000, 0x00007fa0393a0000, 0x00007fa048000000]
+ total_blobs=1201 nmethods=871 adapters=244
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.719 Thread 0x00007fa0480c3800  889       2       java.util.ArrayList$SubList$1::checkForComodification (26 bytes)
+Event: 0.719 Thread 0x00007fa0480c3800 nmethod 889 0x00007fa0393899d0 code [0x00007fa039389b40, 0x00007fa039389d08]
+Event: 0.720 Thread 0x00007fa0480c3800  890       2       java.util.AbstractSet::<init> (5 bytes)
+Event: 0.720 Thread 0x00007fa0480c3800 nmethod 890 0x00007fa039389e10 code [0x00007fa039389f60, 0x00007fa03938a0b0]
+Event: 0.720 Thread 0x00007fa0480c3800  891       2       com.altera.sopcmodel.util.Version::compare (43 bytes)
+Event: 0.720 Thread 0x00007fa0480c3800 nmethod 891 0x00007fa03938a150 code [0x00007fa03938a2c0, 0x00007fa03938a4c8]
+Event: 0.720 Thread 0x00007fa0480c3800  892       2       java.util.ArrayList$SubList::checkForComodification (23 bytes)
+Event: 0.721 Thread 0x00007fa0480c3800 nmethod 892 0x00007fa03938a610 code [0x00007fa03938a780, 0x00007fa03938a948]
+Event: 0.721 Thread 0x00007fa0480c3800  893       2       com.altera.sopclibrary.conan.IpxUtils::cardNodeToCardInfo (715 bytes)
+Event: 0.728 Thread 0x00007fa0480c3800 nmethod 893 0x00007fa03938aa50 code [0x00007fa03938af40, 0x00007fa03938cd78]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 0.210 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa0391626e8 method=java.lang.String.startsWith(Ljava/lang/String;I)Z @ 25
+Event: 0.427 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa0391e1290 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 0.444 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa03920cb50 method=sun.misc.URLClassPath$JarLoader.getResource(Ljava/lang/String;Z)Lsun/misc/Resource; @ 15
+Event: 0.523 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa03930af4c method=com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.skipSpaces()Z @ 303
+Event: 0.547 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa03931f7bc method=com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.scanChar(Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)I @ 59
+Event: 0.547 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa039307428 method=com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.scanLiteral(ILcom/sun/org/apache/xerces/internal/xni/XMLString;Z)I @ 587
+Event: 0.561 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa03930b734 method=com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.peekChar()I @ 14
+Event: 0.585 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa03933e150 method=com.sun.org.apache.xerces.internal.impl.XMLEntityScanner.scanQName(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType
+Event: 0.593 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa0393092d4 method=com.sun.org.apache.xerces.internal.util.SymbolTable.addSymbol([CII)Ljava/lang/String; @ 38
+Event: 0.630 Thread 0x00007fa048010000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fa03933a4bc method=com.sun.org.apache.xerces.internal.impl.io.UTF8Reader.read([CII)I @ 75
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.704 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4c622e8) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.705 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4c65438) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.712 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4c9fec0) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.726 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d49d00) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.726 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d4c990) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.726 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d4f568) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.726 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d52160) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.726 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d54d70) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.726 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d57950) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+Event: 0.727 Thread 0x00007fa048010000 Exception <a 'java/lang/ClassNotFoundException': > (0x00000000a4d5a578) thrown at [/home/adoptopenjdk/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-hotspot/workspace/build/src/hotspot/src/share/vm/prims/jni.cpp, line 738]
+
+Events (10 events):
+Event: 0.688 Thread 0x00007fa048010000 DEOPT PACKING pc=0x00007fa03935fefa sp=0x00007fa04dd1d740
+Event: 0.688 Thread 0x00007fa048010000 DEOPT UNPACKING pc=0x00007fa0390474c4 sp=0x00007fa04dd1d4b0 mode 0
+Event: 0.707 Thread 0x00007fa048010000 DEOPT PACKING pc=0x00007fa03936cfcc sp=0x00007fa04dd1da10
+Event: 0.707 Thread 0x00007fa048010000 DEOPT UNPACKING pc=0x00007fa0390474c4 sp=0x00007fa04dd1d770 mode 0
+Event: 0.710 Thread 0x00007fa048010000 DEOPT PACKING pc=0x00007fa03936b3e4 sp=0x00007fa04dd1d980
+Event: 0.710 Thread 0x00007fa048010000 DEOPT UNPACKING pc=0x00007fa0390474c4 sp=0x00007fa04dd1d6d8 mode 0
+Event: 0.711 loading class com/altera/entityinterfaces/IConnectionKit
+Event: 0.711 loading class com/altera/entityinterfaces/IConnectionKit done
+Event: 0.713 loading class com/altera/entityinterfaces/IMutableConnectionPoint
+Event: 0.713 loading class com/altera/entityinterfaces/IMutableConnectionPoint done
+
+
+Dynamic libraries:
+a2400000-a6200000 rw-p 00000000 00:00 0 
+a6200000-c1800000 ---p 00000000 00:00 0 
+c1800000-c9400000 rw-p 00000000 00:00 0 
+c9400000-100000000 ---p 00000000 00:00 0 
+100000000-100100000 rw-p 00000000 00:00 0 
+100100000-140000000 ---p 00000000 00:00 0 
+55d81d200000-55d81d201000 r-xp 00000000 08:03 3340838                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/bin/java
+55d81d400000-55d81d401000 r--p 00000000 08:03 3340838                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/bin/java
+55d81d401000-55d81d402000 rw-p 00001000 08:03 3340838                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/bin/java
+55d82bc15000-55d82bc36000 rw-p 00000000 00:00 0                          [heap]
+7fa013c00000-7fa013c17000 r-xp 00000000 08:03 3340888                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnet.so
+7fa013c17000-7fa013e16000 ---p 00017000 08:03 3340888                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnet.so
+7fa013e16000-7fa013e17000 r--p 00016000 08:03 3340888                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnet.so
+7fa013e17000-7fa013e18000 rw-p 00017000 08:03 3340888                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnet.so
+7fa014000000-7fa014021000 rw-p 00000000 00:00 0 
+7fa014021000-7fa018000000 ---p 00000000 00:00 0 
+7fa018000000-7fa018021000 rw-p 00000000 00:00 0 
+7fa018021000-7fa01c000000 ---p 00000000 00:00 0 
+7fa01c000000-7fa01c667000 rw-p 00000000 00:00 0 
+7fa01c667000-7fa020000000 ---p 00000000 00:00 0 
+7fa020000000-7fa0207bf000 rw-p 00000000 00:00 0 
+7fa0207bf000-7fa024000000 ---p 00000000 00:00 0 
+7fa024000000-7fa024021000 rw-p 00000000 00:00 0 
+7fa024021000-7fa028000000 ---p 00000000 00:00 0 
+7fa028000000-7fa028930000 rw-p 00000000 00:00 0 
+7fa028930000-7fa02c000000 ---p 00000000 00:00 0 
+7fa02c000000-7fa02c021000 rw-p 00000000 00:00 0 
+7fa02c021000-7fa030000000 ---p 00000000 00:00 0 
+7fa030000000-7fa030021000 rw-p 00000000 00:00 0 
+7fa030021000-7fa034000000 ---p 00000000 00:00 0 
+7fa034000000-7fa034021000 rw-p 00000000 00:00 0 
+7fa034021000-7fa038000000 ---p 00000000 00:00 0 
+7fa03817c000-7fa0381b9000 r--s 0024e000 08:03 3539379                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/xbean.jar
+7fa0381b9000-7fa0381bb000 r--s 00008000 08:03 3539372                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/wraplf.jar
+7fa0381bb000-7fa0381bc000 r--s 00002000 08:03 3539384                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/swing-worker.jar
+7fa0381bc000-7fa0381be000 r--s 00014000 08:03 3539398                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/org-netbeans-swing-outline-RELEASE691-sources.jar
+7fa0381be000-7fa0381c4000 r--s 0002e000 08:03 3539374                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/l2fprod-common-sheet.jar
+7fa0381c4000-7fa0381c8000 r--s 00031000 08:03 3539331                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jline-2.12.jar
+7fa0381c8000-7fa038200000 r--s 00217000 08:03 3539360                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/docking-frames-core.jar
+7fa038200000-7fa038211000 r-xp 00000000 08:03 3340913                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnio.so
+7fa038211000-7fa038411000 ---p 00011000 08:03 3340913                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnio.so
+7fa038411000-7fa038412000 r--p 00011000 08:03 3340913                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnio.so
+7fa038412000-7fa038413000 rw-p 00012000 08:03 3340913                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libnio.so
+7fa038413000-7fa038414000 r--s 00011000 08:03 3539411                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/miglayout-swing.jar
+7fa038414000-7fa038416000 r--s 00004000 08:03 3539420                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jsr173_1.0_api.jar
+7fa038416000-7fa038421000 r--s 0008b000 08:03 3539404                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jgraphx.jar
+7fa038421000-7fa038432000 r--s 0014c000 08:03 3539347                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jfreechart-1.0.13.jar
+7fa038432000-7fa038438000 r--s 00046000 08:03 3539328                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jcommon-1.0.16.jar
+7fa038438000-7fa03844e000 r--s 000bc000 08:03 3539373                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/docking-frames-common.jar
+7fa03844e000-7fa03845e000 r--s 000a9000 08:03 3539341                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/commons-collections4-4.3.jar
+7fa03845e000-7fa038460000 r--s 00003000 08:03 3539311                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.util.elf.jar
+7fa038460000-7fa038462000 r--s 00002000 08:03 3539442                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.tools.sopcformats.jar
+7fa038462000-7fa038463000 r--s 00002000 08:03 3539334                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.tools.exampledesigns.jar
+7fa038463000-7fa038464000 r--s 00006000 08:03 3539348                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.spdy.jar
+7fa038464000-7fa038465000 r--s 0000b000 08:03 3539400                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.sldhubchannel.jar
+7fa038465000-7fa038467000 r--s 00007000 08:03 3539405                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.gdbserver.jar
+7fa038467000-7fa038468000 r--s 00007000 08:03 3539353                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.issp.jar
+7fa038468000-7fa03846b000 r--s 0000d000 08:03 3539306                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.monitor.jar
+7fa03846b000-7fa038472000 r--s 0003f000 08:03 3539350                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.busanalyzer.jar
+7fa038472000-7fa038473000 r--s 00003000 08:03 3539449                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.iobus.jar
+7fa038473000-7fa038474000 r--s 00002000 08:03 3539392                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.helper.jar
+7fa038474000-7fa03847a000 r--s 0002c000 08:03 3539439                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.dashboard.jar
+7fa03847a000-7fa03847e000 r--s 00020000 08:03 3539370                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.gui.jar
+7fa03847e000-7fa038483000 r--s 00029000 08:03 3539428                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.database.jar
+7fa038483000-7fa038484000 r--s 00001000 08:03 3539389                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.memory.jar
+7fa038484000-7fa038486000 r--s 00003000 08:03 3539444                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.pli.jar
+7fa038486000-7fa038487000 r--s 00006000 08:03 3539318                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.tcpchannel.jar
+7fa038487000-7fa03848a000 r--s 00011000 08:03 3539425                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.usb.jar
+7fa03848a000-7fa03848e000 r--s 0001d000 08:03 3539361                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.drivers.jar
+7fa03848e000-7fa03848f000 r--s 00001000 08:03 3539430                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.matlabapi.jar
+7fa03848f000-7fa038493000 r--s 0001d000 08:03 3539335                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.app.jar
+7fa038493000-7fa038495000 r--s 0000c000 08:03 3539349                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.hwtclvalidator.jar
+7fa038495000-7fa038496000 r--s 0000e000 08:03 3539401                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.packetformatconverter.jar
+7fa038496000-7fa038498000 r--s 00003000 08:03 3539453                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.script.debugwindow.jar
+7fa038498000-7fa03849a000 r--s 00001000 08:03 3539452                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.nios2.trace.jar
+7fa03849a000-7fa03849c000 r--s 00009000 08:03 3539312                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.nios2.rtl.trace.jar
+7fa03849c000-7fa0384ae000 r--s 00091000 08:03 3539324                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.nios2.isa.jar
+7fa0384ae000-7fa0384b7000 r--s 00076000 08:03 3539358                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jmwizc.jar
+7fa0384b7000-7fa0384b9000 r--s 00007000 08:03 3539450                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.module.jar
+7fa0384b9000-7fa0384bb000 r--s 0000a000 08:03 3539429                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.widgets.jar
+7fa0384bb000-7fa0384c0000 r--s 00055000 08:03 3539448                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.hypericonnect.jar
+7fa0384c0000-7fa0384f1000 rw-p 00000000 00:00 0 
+7fa0384f1000-7fa0384f6000 r--s 00035000 08:03 3539381                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.sbtools.jar
+7fa0384f6000-7fa0384f8000 r--s 00007000 08:03 3539325                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.blackboxmodule.jar
+7fa0384f8000-7fa0384f9000 r--s 00003000 08:03 3539310                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.ui.jar
+7fa0384f9000-7fa03852a000 r--s 00411000 08:03 3539309                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopceditor.jar
+7fa03852a000-7fa03852d000 r--s 00020000 08:03 3539323                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.iplauncher.jar
+7fa03852d000-7fa03852f000 r--s 0000e000 08:03 3539424                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.ip.regenerator.jar
+7fa03852f000-7fa038532000 r--s 00024000 08:03 3539447                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.genman.jar
+7fa038532000-7fa038535000 r--s 0002d000 08:03 3539414                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.launch.jar
+7fa038535000-7fa038537000 r--s 00006000 08:03 3539454                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.configrom.jar
+7fa038537000-7fa038538000 r--s 00000000 08:03 3539390                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.jtagsimulator.jar
+7fa038538000-7fa038539000 r--s 00002000 08:03 3539397                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.lightclient.jar
+7fa038539000-7fa03853b000 r--s 00007000 08:03 3539355                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.driver.jar
+7fa03853b000-7fa038543000 r--s 00048000 08:03 3539433                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.jtag.jar
+7fa038543000-7fa038551000 r--s 00072000 08:03 3539395                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.elf.jar
+7fa038551000-7fa038555000 r--s 00036000 08:03 3539367                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.gui.jar
+7fa038555000-7fa038558000 r--s 00038000 08:03 3539446                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.scripting.jar
+7fa038558000-7fa03855e000 r--s 0004a000 08:03 3539314                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.designs.jar
+7fa03855e000-7fa038569000 r--s 00184000 08:03 3539351                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.systemconsole.jar
+7fa038569000-7fa038570000 r--s 00056000 08:03 3539423                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar
+7fa038570000-7fa038571000 r--s 00004000 08:03 3539406                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar
+7fa038571000-7fa038572000 r--s 00003000 08:03 3539354                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.tcl.ui.jar
+7fa038572000-7fa038573000 r--s 0001f000 08:03 3539345                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar
+7fa038573000-7fa038575000 r--s 00006000 08:03 3539385                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar
+7fa038575000-7fa038578000 r--s 0000b000 08:03 3539438                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar
+7fa038578000-7fa03857c000 r--s 0001c000 08:03 3539426                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar
+7fa03857c000-7fa03857e000 r--s 0000f000 08:03 3539443                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar
+7fa03857e000-7fa03858b000 r--s 00084000 08:03 3539441                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar
+7fa03858b000-7fa038592000 r--s 00063000 08:03 3539393                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.megawizard2.jar
+7fa038592000-7fa038596000 r--s 00029000 08:03 3539432                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.jar
+7fa038596000-7fa0385a1000 r--s 00074000 08:03 3539375                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/velocity-dep-1.4.jar
+7fa0385a1000-7fa0385a9000 r--s 00051000 08:03 3539410                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/velocity-1.4.jar
+7fa0385a9000-7fa0385ad000 r--s 0001f000 08:03 3539391                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/explicitlayout.jar
+7fa0385ad000-7fa0385af000 r--s 00006000 08:03 3539418                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcfactories.jar
+7fa0385af000-7fa0385b1000 r--s 0001a000 08:03 3539445                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopclibrary.jar
+7fa0385b1000-7fa0385b2000 r--s 00000000 08:03 3539330                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.librarian.jar
+7fa0385b2000-7fa0385b3000 r--s 00002000 08:03 3539368                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcplatform.jar
+7fa0385b3000-7fa0385b4000 r--s 00000000 08:03 3539422                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.service.jre.jar
+7fa0385b4000-7fa0385b5000 r--s 00000000 08:03 3539359                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/xmlbeans-2.2.0.jar
+7fa0385b5000-7fa0385b9000 r--s 0001e000 08:03 3539369                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.utilities.jar
+7fa0385b9000-7fa0385ba000 r--s 00003000 08:03 3539317                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.embeddedsw.jar
+7fa0385ba000-7fa0385bc000 r--s 00016000 08:03 3539338                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.swinfo.jar
+7fa0385bc000-7fa0385c0000 r--s 0000d000 08:03 3539431                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar
+7fa0385c0000-7fa0385c2000 r--s 0000b000 08:03 3539419                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar
+7fa0385c2000-7fa0385c7000 r--s 0008b000 08:03 3539357                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar
+7fa0385c7000-7fa0385ca000 r--s 00014000 08:03 3539336                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar
+7fa0385ca000-7fa0385d0000 r--s 0007a000 08:03 3539305                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jacl1.3.2a.jar
+7fa0385d0000-7fa0385d5000 r--s 0002a000 08:03 3539332                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.tcl.interpreter.jar
+7fa0385d5000-7fa0385d8000 r--s 00012000 08:03 3539427                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcreport.build.jar
+7fa0385d8000-7fa0385da000 r--s 00007000 08:03 3539313                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcreport.jar
+7fa0385da000-7fa0385dc000 r--s 0000d000 08:03 3539365                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.atlantic.jar
+7fa0385dc000-7fa0385dd000 r--s 0000c000 08:03 3539363                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/commons-logging-1.1.jar
+7fa0385dd000-7fa0385e1000 r--s 0003e000 08:03 3539319                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.utilities.jar
+7fa0385e1000-7fa0385e6000 r--s 0000f000 08:03 3539386                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.privateinterfaces.jar
+7fa0385e6000-7fa0385e9000 r--s 0000b000 08:03 3539346                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar
+7fa0385e9000-7fa0385fa000 r--s 000e8000 08:03 3539316                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.jar
+7fa0385fa000-7fa0385ff000 r--s 00054000 08:03 3539377                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.transforms.jar
+7fa0385ff000-7fa038600000 ---p 00000000 00:00 0 
+7fa038600000-7fa038700000 rw-p 00000000 00:00 0 
+7fa038700000-7fa038703000 ---p 00000000 00:00 0 
+7fa038703000-7fa038800000 rw-p 00000000 00:00 0 
+7fa038800000-7fa038fc0000 rw-p 00000000 00:00 0 
+7fa038fc0000-7fa039000000 ---p 00000000 00:00 0 
+7fa039000000-7fa0393a0000 rwxp 00000000 00:00 0 
+7fa0393a0000-7fa048000000 ---p 00000000 00:00 0 
+7fa048000000-7fa048bca000 rw-p 00000000 00:00 0 
+7fa048bca000-7fa04c000000 ---p 00000000 00:00 0 
+7fa04c000000-7fa04c002000 r--s 00007000 08:03 3539437                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.model.common.jar
+7fa04c002000-7fa04c003000 r--s 0000b000 08:03 3539339                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcdocument.jar
+7fa04c003000-7fa04c00b000 r--s 00051000 08:03 3539417                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.jar
+7fa04c00b000-7fa04c011000 r--s 00031000 08:03 3539412                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jaxb-core.jar
+7fa04c011000-7fa04c022000 r--s 000d0000 08:03 3539356                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jaxb-impl.jar
+7fa04c022000-7fa04c02a000 r--s 00051000 08:03 3539340                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.qsys.cmsis.jar
+7fa04c02a000-7fa04c031000 r--s 00050000 08:03 3539434                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopc.generator.jar
+7fa04c031000-7fa04c038000 r--s 0007d000 08:03 3539415                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.tclmodule.jar
+7fa04c038000-7fa04c03e000 r--s 00045000 08:03 3539343                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar
+7fa04c03e000-7fa04c070000 r--s 0026d000 08:03 3539333                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/guava-27.1-jre.jar
+7fa04c070000-7fa04c071000 ---p 00000000 00:00 0 
+7fa04c071000-7fa04c074000 ---p 00000000 00:00 0 
+7fa04c074000-7fa04c171000 rw-p 00000000 00:00 0 
+7fa04c171000-7fa04c172000 ---p 00000000 00:00 0 
+7fa04c172000-7fa04c175000 ---p 00000000 00:00 0 
+7fa04c175000-7fa04c272000 rw-p 00000000 00:00 0 
+7fa04c272000-7fa04c273000 ---p 00000000 00:00 0 
+7fa04c273000-7fa04c276000 ---p 00000000 00:00 0 
+7fa04c276000-7fa04c373000 rw-p 00000000 00:00 0 
+7fa04c373000-7fa04c376000 ---p 00000000 00:00 0 
+7fa04c376000-7fa04c473000 rw-p 00000000 00:00 0 
+7fa04c473000-7fa04c75c000 r--p 00000000 00:22 4210539                    /usr/lib/locale/locale-archive
+7fa04c75c000-7fa04c75f000 ---p 00000000 00:00 0 
+7fa04c75f000-7fa04c85c000 rw-p 00000000 00:00 0 
+7fa04c85c000-7fa04c85f000 ---p 00000000 00:00 0 
+7fa04c85f000-7fa04c95c000 rw-p 00000000 00:00 0 
+7fa04c95c000-7fa04c99b000 rw-p 00000000 00:00 0 
+7fa04c99b000-7fa04cb51000 ---p 00000000 00:00 0 
+7fa04cb51000-7fa04cb70000 rw-p 00000000 00:00 0 
+7fa04cb70000-7fa04cc4b000 ---p 00000000 00:00 0 
+7fa04cc4b000-7fa04cc89000 rw-p 00000000 00:00 0 
+7fa04cc89000-7fa04ce3f000 ---p 00000000 00:00 0 
+7fa04ce3f000-7fa04ce4f000 rw-p 00000000 00:00 0 
+7fa04ce4f000-7fa04d200000 ---p 00000000 00:00 0 
+7fa04d200000-7fa04d21b000 r-xp 00000000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7fa04d21b000-7fa04d41a000 ---p 0001b000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7fa04d41a000-7fa04d41b000 r--p 0001a000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7fa04d41b000-7fa04d41c000 rw-p 0001b000 08:03 3340900                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libzip.so
+7fa04d41c000-7fa04d420000 r--s 00015000 08:03 3539307                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/jaxb-api.jar
+7fa04d420000-7fa04d423000 r--s 0002a000 08:03 3539435                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.hdlwriter.jar
+7fa04d423000-7fa04d426000 r--s 0000e000 08:03 3539408                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.minieval2.jar
+7fa04d426000-7fa04d427000 r--s 00006000 08:03 3539396                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.hdlcomponent.jar
+7fa04d427000-7fa04d42a000 r--s 00036000 08:03 3539366                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/org-netbeans-swing-outline.jar
+7fa04d42a000-7fa04d42c000 r--s 00010000 08:03 3539327                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.sopc.qsymbol.jar
+7fa04d42c000-7fa04d42e000 r--s 00000000 08:03 3539326                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.version.jar
+7fa04d42e000-7fa04d600000 r--s 03ca8000 08:03 3340658                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/rt.jar
+7fa04d600000-7fa04d629000 r-xp 00000000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7fa04d629000-7fa04d828000 ---p 00029000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7fa04d828000-7fa04d829000 r--p 00028000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7fa04d829000-7fa04d82b000 rw-p 00029000 08:03 3340903                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libjava.so
+7fa04d82b000-7fa04d83b000 r--s 000a4000 08:03 3539403                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/mydoggy-plaf.jar
+7fa04d83b000-7fa04d83c000 ---p 00000000 00:00 0 
+7fa04d83c000-7fa04d93c000 rw-p 00000000 00:00 0 
+7fa04d93c000-7fa04da00000 rw-p 00000000 00:00 0 
+7fa04da00000-7fa04da10000 r-xp 00000000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7fa04da10000-7fa04dc0f000 ---p 00010000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7fa04dc0f000-7fa04dc11000 r--p 0000f000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7fa04dc11000-7fa04dc12000 rw-p 00011000 08:03 3340916                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/libverify.so
+7fa04dc12000-7fa04dc14000 r--s 00018000 08:03 3539362                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.jdbcsqlite.jar
+7fa04dc14000-7fa04dc17000 r--s 0000e000 08:03 3539436                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.infrastructure.jar
+7fa04dc17000-7fa04dc1f000 r--s 0004f000 08:03 3539382                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.ui.ientity.jar
+7fa04dc1f000-7fa04dc20000 ---p 00000000 00:00 0 
+7fa04dc20000-7fa04dc23000 ---p 00000000 00:00 0 
+7fa04dc23000-7fa04dd20000 rw-p 00000000 00:00 0 
+7fa04dd20000-7fa04dd30000 r--p 00000000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7fa04dd30000-7fa04dda4000 r-xp 00010000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7fa04dda4000-7fa04ddfe000 r--p 00084000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7fa04ddfe000-7fa04ddff000 r--p 000dd000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7fa04ddff000-7fa04de00000 rw-p 000de000 00:22 3936071                    /usr/lib/x86_64-linux-gnu/libm.so.6
+7fa04de00000-7fa04eab5000 r-xp 00000000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7fa04eab5000-7fa04ecb4000 ---p 00cb5000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7fa04ecb4000-7fa04ed57000 r--p 00cb4000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7fa04ed57000-7fa04ed80000 rw-p 00d57000 08:03 3340920                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7fa04ed80000-7fa04edc8000 rw-p 00000000 00:00 0 
+7fa04edc8000-7fa04edce000 r--s 00048000 08:03 3539321                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar
+7fa04edce000-7fa04edcf000 r--s 00000000 08:03 3539322                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/failureaccess-1.0.1.jar
+7fa04edcf000-7fa04edd0000 r--s 00005000 08:03 3539387                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.ui.quartus.jar
+7fa04edd0000-7fa04edd2000 r--s 00004000 08:03 3539451                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/mydoggy-res.jar
+7fa04edd2000-7fa04edd4000 r--s 00007000 08:03 3539315                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/mydoggy-api.jar
+7fa04edd4000-7fa04edd6000 r--s 00010000 08:03 3539402                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/miglayout15-swing.jar
+7fa04edd6000-7fa04ede0000 r--s 00052000 08:03 3539378                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.ui.jar
+7fa04ede0000-7fa04edee000 r--s 0007b000 08:03 3539342                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar
+7fa04edee000-7fa04edf2000 r--s 00022000 08:03 3539407                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/binding-2.0.6.jar
+7fa04edf2000-7fa04edf9000 r--s 00094000 08:03 3539413                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar
+7fa04edf9000-7fa04edfc000 r--s 00011000 08:03 3539308                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/basicmodel.jar
+7fa04edfc000-7fa04edfd000 r--s 00007000 08:03 3539383                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/asm-commons-3.1.jar
+7fa04edfd000-7fa04ee01000 r--s 0004a000 08:03 3539394                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/appframework-1.03.jar
+7fa04ee01000-7fa04ee07000 r--s 000d3000 08:03 3340858                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/jfr.jar
+7fa04ee07000-7fa04ee0c000 r--s 002f9000 08:03 3340654                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/charsets.jar
+7fa04ee0c000-7fa04ee1f000 r--s 00346000 08:03 3340857                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/resources.jar
+7fa04ee1f000-7fa04ee45000 r--p 00000000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7fa04ee45000-7fa04ef9a000 r-xp 00026000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7fa04ef9a000-7fa04efed000 r--p 0017b000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7fa04efed000-7fa04eff1000 r--p 001ce000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7fa04eff1000-7fa04eff3000 rw-p 001d2000 00:22 3936034                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7fa04eff3000-7fa04f000000 rw-p 00000000 00:00 0 
+7fa04f000000-7fa04f016000 r-xp 00000000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7fa04f016000-7fa04f215000 ---p 00016000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7fa04f215000-7fa04f216000 r--p 00015000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7fa04f216000-7fa04f217000 rw-p 00016000 08:03 3340919                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7fa04f217000-7fa04f218000 r--s 0000a000 08:03 3539337                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/asm-3.1.jar
+7fa04f218000-7fa04f219000 r--s 00002000 08:03 3539409                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/TableLayout.jar
+7fa04f219000-7fa04f21e000 r--s 000a7000 08:03 3340651                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/jsse.jar
+7fa04f21e000-7fa04f2a1000 rw-p 00000000 00:00 0 
+7fa04f2a1000-7fa04f2a9000 rw-s 00000000 00:1e 44                         /tmp/hsperfdata_civ/12997
+7fa04f2a9000-7fa04f2aa000 r--p 00000000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7fa04f2aa000-7fa04f2ab000 r-xp 00001000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7fa04f2ab000-7fa04f2ac000 r--p 00002000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7fa04f2ac000-7fa04f2ad000 r--p 00002000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7fa04f2ad000-7fa04f2ae000 rw-p 00003000 00:22 3936100                    /usr/lib/x86_64-linux-gnu/librt.so.1
+7fa04f2ae000-7fa04f2b0000 rw-p 00000000 00:00 0 
+7fa04f2b0000-7fa04f2b1000 r--p 00000000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7fa04f2b1000-7fa04f2b2000 r-xp 00001000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7fa04f2b2000-7fa04f2b3000 r--p 00002000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7fa04f2b3000-7fa04f2b4000 r--p 00002000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7fa04f2b4000-7fa04f2b5000 rw-p 00003000 00:22 3936047                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+7fa04f2b5000-7fa04f2b6000 r--p 00000000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7fa04f2b6000-7fa04f2b7000 r-xp 00001000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7fa04f2b7000-7fa04f2b8000 r--p 00002000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7fa04f2b8000-7fa04f2b9000 r--p 00002000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7fa04f2b9000-7fa04f2ba000 rw-p 00003000 00:22 3936094                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7fa04f2ba000-7fa04f2bb000 r--s 0000d000 08:03 3539440                    /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/Nlview.jar
+7fa04f2bb000-7fa04f2bd000 r--s 00016000 08:03 3340859                    /home/civ/intelFPGA_lite/20.1/quartus/linux64/jre64/lib/jce.jar
+7fa04f2bd000-7fa04f2be000 rw-p 00000000 00:00 0 
+7fa04f2be000-7fa04f2bf000 r--p 00000000 00:00 0 
+7fa04f2bf000-7fa04f2c1000 rw-p 00000000 00:00 0 
+7fa04f2c1000-7fa04f2c5000 r--p 00000000 00:00 0                          [vvar]
+7fa04f2c5000-7fa04f2c7000 r-xp 00000000 00:00 0                          [vdso]
+7fa04f2c7000-7fa04f2c8000 r--p 00000000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fa04f2c8000-7fa04f2ee000 r-xp 00001000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fa04f2ee000-7fa04f2f8000 r--p 00027000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fa04f2f8000-7fa04f2fa000 r--p 00031000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fa04f2fa000-7fa04f2fc000 rw-p 00033000 00:22 3936014                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffeb2a09000-7ffeb2a2d000 rw-p 00000000 00:00 0                          [stack]
+
+VM Arguments:
+jvm_args: -Xmx1500M -XX:+UseSerialGC 
+java_command: com.altera.sopcmodel.sbtools.sbcatalog.SbCatalog --xml --project-directory= --search-path=$,/home/civ/rafaelAula2,/home/civ/rafaelAula2
+java_class_path (initial): /home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/Nlview.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/TableLayout.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/appframework-1.03.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/asm-3.1.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/asm-commons-3.1.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/basicmodel.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/binding-2.0.6.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar:/home/civ/intelFPGA_lite/20.1/quartus/sopc_builder/model/lib/com.altera.
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/civ/intelFPGA_lite/20.1/quartus/linux64:/home/civ/intelFPGA_lite/20.1/quartus/adm:/home/civ/intelFPGA_lite/20.1/quartus/linux64:/home/civ/bin:/home/civ/.local/bin:/usr/local/bin:/home/civ/bin:/home/civ/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/civ/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+LD_LIBRARY_PATH=/home/civ/intelFPGA_lite/20.1/quartus/linux64:/home/civ/intelFPGA_lite/20.1/quartus/linux64:
+SHELL=zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa83ff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa83ff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8d6220], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8d60f0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8d62e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8d62e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8d62e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8d62e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+uname:Linux 6.12.34-0-lts #1-Alpine SMP PREEMPT_DYNAMIC 2025-06-23 13:30:55 x86_64
+libc:glibc 2.36 NPTL 2.36 
+rlimit: STACK 7812k, CORE 0k, NPROC 46646, NOFILE 4096, AS infinity
+load average:1.22 1.04 0.77
+
+/proc/meminfo:
+MemTotal:       12166208 kB
+MemFree:         8628072 kB
+MemAvailable:    9888888 kB
+Buffers:           81724 kB
+Cached:          1792580 kB
+SwapCached:            0 kB
+Active:          2612672 kB
+Inactive:         341856 kB
+Active(anon):    1488360 kB
+Inactive(anon):        0 kB
+Active(file):    1124312 kB
+Inactive(file):   341856 kB
+Unevictable:      326624 kB
+Mlocked:            2852 kB
+SwapTotal:      15624188 kB
+SwapFree:       15624188 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               516 kB
+Writeback:             0 kB
+AnonPages:       1400316 kB
+Mapped:           766052 kB
+Shmem:            406036 kB
+KReclaimable:      67260 kB
+Slab:             120620 kB
+SReclaimable:      67260 kB
+SUnreclaim:        53360 kB
+KernelStack:        9264 kB
+PageTables:        21572 kB
+SecPageTables:      2056 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    21707292 kB
+Committed_AS:    3232004 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       39624 kB
+VmallocChunk:          0 kB
+Percpu:             1168 kB
+AnonHugePages:    153600 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      117696 kB
+DirectMap2M:     3989504 kB
+DirectMap1G:     9437184 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 2893.317
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 2893.365
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 2893.348
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz
+stepping	: 4
+microcode	: 0x2f
+cpu MHz		: 2893.344
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts vnmi md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple ept_violation_ve
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_unknown
+bogomips	: 4789.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 12166208k(8628072k free), swap 15624188k(15624188k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.265-b01) for linux-amd64 JRE (1.8.0_265-b01), built on Jul 28 2020 15:17:23 by "jenkins" with gcc 4.8.2 20140120 (Red Hat 4.8.2-15)
+
+time: Fri Jul 18 10:28:35 2025
+timezone: -03
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
