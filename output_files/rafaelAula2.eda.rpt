@@ -1,5 +1,5 @@
 EDA Netlist Writer report for rafaelAula2
-Fri Jul 11 10:27:54 2025
+Sun Aug  3 20:04:35 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -8,7 +8,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. EDA Netlist Writer Messages
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
 
 
 
@@ -32,14 +34,45 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------+
-; EDA Netlist Writer Summary                                    ;
-+---------------------------+-----------------------------------+
-; EDA Netlist Writer Status ; Failed - Fri Jul 11 10:27:54 2025 ;
-; Revision Name             ; rafaelAula2                       ;
-; Top-level Entity Name     ; CI_74LS157                        ;
-; Family                    ; MAX 10                            ;
-+---------------------------+-----------------------------------+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Sun Aug  3 20:04:35 2025 ;
+; Revision Name             ; rafaelAula2                           ;
+; Top-level Entity Name     ; DM74LS138                             ;
+; Family                    ; MAX 10                                ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                        ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++--------------------------------------------------+
+; Simulation Generated Files                       ;
++--------------------------------------------------+
+; Generated Files                                  ;
++--------------------------------------------------+
+; /home/civ/SAP-BR/simulation/qsim//rafaelAula2.vo ;
++--------------------------------------------------+
 
 
 +-----------------------------+
@@ -62,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Jul 11 10:27:54 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off rafaelAula2 -c rafaelAula2 --vector_source=/home/civ/rafaelAula2/DM74LS138/Waveform.vwf --testbench_file=/home/civ/rafaelAula2/simulation/qsim/DM74LS138/Waveform.vwf.vt
+    Info: Processing started: Sun Aug  3 20:04:35 2025
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/civ/SAP-BR/simulation/qsim/ rafaelAula2 -c rafaelAula2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Error (199013): HDL output file name "/home/civ/rafaelAula2/simulation/qsim/DM74LS138/Waveform.vwf.vt" used with --testbench_file option contains a non-existent directory path
-Error: Quartus Prime EDA Netlist Writer was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 591 megabytes
-    Error: Processing ended: Fri Jul 11 10:27:54 2025
-    Error: Elapsed time: 00:00:00
-    Error: Total CPU time (on all processors): 00:00:00
+Info (204019): Generated file rafaelAula2.vo in folder "/home/civ/SAP-BR/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 598 megabytes
+    Info: Processing ended: Sun Aug  3 20:04:35 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 

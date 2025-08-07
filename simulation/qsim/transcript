@@ -1,28 +1,28 @@
 # do rafaelAula2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:21:41 on Jul 11,2025
+# Start time: 20:04:36 on Aug 03,2025
 # vlog -work work rafaelAula2.vo 
-# -- Compiling module CI_74LS157
+# -- Compiling module DM74LS138
 # -- Compiling module hard_block
 # 
 # Top level modules:
-# 	CI_74LS157
-# End time: 10:21:41 on Jul 11,2025, Elapsed time: 0:00:00
+# 	DM74LS138
+# End time: 20:04:36 on Aug 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:21:41 on Jul 11,2025
-# vlog -work work Waveform.vwf.vt 
-# -- Compiling module CI_74LS157_vlg_vec_tst
+# Start time: 20:04:36 on Aug 03,2025
+# vlog -work work DM74LS138/Waveform.vwf.vt 
+# -- Compiling module DM74LS138_vlg_vec_tst
 # 
 # Top level modules:
-# 	CI_74LS157_vlg_vec_tst
-# End time: 10:21:41 on Jul 11,2025, Elapsed time: 0:00:00
+# 	DM74LS138_vlg_vec_tst
+# End time: 20:04:36 on Aug 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CI_74LS157_vlg_vec_tst 
-# Start time: 10:21:41 on Jul 11,2025
-# Loading work.CI_74LS157_vlg_vec_tst
-# Loading work.CI_74LS157
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.DM74LS138_vlg_vec_tst 
+# Start time: 20:04:36 on Aug 03,2025
+# Loading work.DM74LS138_vlg_vec_tst
+# Loading work.DM74LS138
 # Loading work.hard_block
 # Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
 # Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
@@ -30,13 +30,15 @@
 # Loading fiftyfivenm_ver.fiftyfivenm_unvm
 # Loading fiftyfivenm_ver.fiftyfivenm_adcblock
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /CI_74LS157_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: rafaelAula2.vo Line: 414
-# ** Warning: (vsim-3722) rafaelAula2.vo(414): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /DM74LS138_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: rafaelAula2.vo Line: 526
+# ** Warning: (vsim-3722) rafaelAula2.vo(526): [TFMPC] - Missing connection for port 'clk_dft'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /CI_74LS157_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: rafaelAula2.vo Line: 437
-# ** Warning: (vsim-3722) rafaelAula2.vo(437): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /DM74LS138_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: rafaelAula2.vo Line: 549
+# ** Warning: (vsim-3722) rafaelAula2.vo(549): [TFMPC] - Missing connection for port 'clk_dft'.
 # after#26
-# ** Note: $finish    : Waveform.vwf.vt(69)
-#    Time: 1 us  Iteration: 0  Instance: /CI_74LS157_vlg_vec_tst
-# End time: 10:21:41 on Jul 11,2025, Elapsed time: 0:00:00
+# ** Note: $stop    : DM74LS138/Waveform.vwf.vt(69)
+#    Time: 1 us  Iteration: 0  Instance: /DM74LS138_vlg_vec_tst
+# Break in Module DM74LS138_vlg_vec_tst at DM74LS138/Waveform.vwf.vt line 69
+# Stopped at DM74LS138/Waveform.vwf.vt line 69
+# End time: 20:04:36 on Aug 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 4

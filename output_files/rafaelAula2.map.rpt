@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rafaelAula2
-Fri Jul 11 10:19:12 2025
+Wed Aug  6 21:05:48 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 11 10:19:12 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug  6 21:05:48 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rafaelAula2                                 ;
-; Top-level Entity Name              ; CI_74LS157                                  ;
+; Top-level Entity Name              ; RAM                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4                                           ;
-;     Total combinational functions  ; 4                                           ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 14                                          ;
+; Total pins                         ; 1                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; CI_74LS157         ; rafaelAula2        ;
+; Top-level entity name                                            ; RAM                ; rafaelAula2        ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -153,8 +153,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -164,45 +164,44 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------+---------+
-; CI_74LS157/CI_74LS157.bdf        ; yes             ; User Block Diagram/Schematic File  ; /home/civ/rafaelAula2/CI_74LS157/CI_74LS157.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------+---------+
+; RAM/RAM.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/RAM/RAM.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 4       ;
-;                                             ;         ;
-; Total combinational functions               ; 4       ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 4       ;
-;     -- 3 input functions                    ; 0       ;
-;     -- <=2 input functions                  ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 4       ;
-;     -- arithmetic mode                      ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 14      ;
-;                                             ;         ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; S~input ;
-; Maximum fan-out                             ; 4       ;
-; Total fan-out                               ; 34      ;
-; Average fan-out                             ; 1.06    ;
-+---------------------------------------------+---------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; C2    ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 1     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |CI_74LS157                ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 14   ; 0            ; 0          ; |CI_74LS157         ; CI_74LS157  ; work         ;
+; |RAM                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 1    ; 0            ; 0          ; |RAM                ; RAM         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,17 +231,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 14                          ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
-;         4 data inputs ; 4                           ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 1                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -260,26 +256,594 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jul 11 10:19:01 2025
+    Info: Processing started: Wed Aug  6 21:05:43 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rafaelAula2 -c rafaelAula2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file CI_74LS157/CI_74LS157.bdf
     Info (12023): Found entity 1: CI_74LS157
 Info (12021): Found 1 design units, including 1 entities, in source file DM74LS138/DM74LS138.bdf
     Info (12023): Found entity 1: DM74LS138
-Info (12127): Elaborating entity "CI_74LS157" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Info (12021): Found 1 design units, including 1 entities, in source file SN74LS173/SN74LS173.bdf
+    Info (12023): Found entity 1: SN74LS173
+Info (12021): Found 1 design units, including 1 entities, in source file FA74LS283/FA74LS283.bdf
+    Info (12023): Found entity 1: FA74LS283
+Info (12021): Found 1 design units, including 1 entities, in source file RAM/RAM.bdf
+    Info (12023): Found entity 1: RAM
+Info (12127): Elaborating entity "RAM" for the top level hierarchy
+Warning (275009): Pin "C2" not connected
+Warning (275008): Primitive "NOT" of instance "inst" not used
+Warning (275008): Primitive "NOT" of instance "inst1" not used
+Warning (275008): Primitive "AND2" of instance "inst100" not used
+Warning (275008): Primitive "DFF" of instance "inst101" not used
+Warning (275008): Primitive "VCC" of instance "inst102" not used
+Warning (275008): Primitive "VCC" of instance "inst103" not used
+Warning (275008): Primitive "DFF" of instance "inst104" not used
+Warning (275008): Primitive "VCC" of instance "inst105" not used
+Warning (275008): Primitive "VCC" of instance "inst106" not used
+Warning (275008): Primitive "AND2" of instance "inst107" not used
+Warning (275008): Primitive "AND2" of instance "inst108" not used
+Warning (275008): Primitive "OR8" of instance "inst109" not used
+Warning (275008): Primitive "DFF" of instance "inst110" not used
+Warning (275008): Primitive "VCC" of instance "inst111" not used
+Warning (275008): Primitive "VCC" of instance "inst112" not used
+Warning (275008): Primitive "DFF" of instance "inst113" not used
+Warning (275008): Primitive "VCC" of instance "inst114" not used
+Warning (275008): Primitive "VCC" of instance "inst115" not used
+Warning (275008): Primitive "AND2" of instance "inst116" not used
+Warning (275008): Primitive "AND2" of instance "inst117" not used
+Warning (275008): Primitive "DFF" of instance "inst118" not used
+Warning (275008): Primitive "VCC" of instance "inst119" not used
+Warning (275008): Primitive "VCC" of instance "inst120" not used
+Warning (275008): Primitive "DFF" of instance "inst121" not used
+Warning (275008): Primitive "VCC" of instance "inst122" not used
+Warning (275008): Primitive "VCC" of instance "inst123" not used
+Warning (275008): Primitive "AND2" of instance "inst124" not used
+Warning (275008): Primitive "AND2" of instance "inst125" not used
+Warning (275008): Primitive "DFF" of instance "inst126" not used
+Warning (275008): Primitive "VCC" of instance "inst127" not used
+Warning (275008): Primitive "VCC" of instance "inst128" not used
+Warning (275008): Primitive "DFF" of instance "inst129" not used
+Warning (275008): Primitive "VCC" of instance "inst130" not used
+Warning (275008): Primitive "VCC" of instance "inst131" not used
+Warning (275008): Primitive "AND2" of instance "inst132" not used
+Warning (275008): Primitive "AND2" of instance "inst133" not used
+Warning (275008): Primitive "DFF" of instance "inst134" not used
+Warning (275008): Primitive "VCC" of instance "inst135" not used
+Warning (275008): Primitive "DFF" of instance "inst136" not used
+Warning (275008): Primitive "VCC" of instance "inst137" not used
+Warning (275008): Primitive "VCC" of instance "inst138" not used
+Warning (275008): Primitive "AND2" of instance "inst139" not used
+Warning (275008): Primitive "AND2" of instance "inst140" not used
+Warning (275008): Primitive "OR8" of instance "inst141" not used
+Warning (275008): Primitive "DFF" of instance "inst142" not used
+Warning (275008): Primitive "VCC" of instance "inst143" not used
+Warning (275008): Primitive "VCC" of instance "inst144" not used
+Warning (275008): Primitive "DFF" of instance "inst145" not used
+Warning (275008): Primitive "VCC" of instance "inst146" not used
+Warning (275008): Primitive "VCC" of instance "inst147" not used
+Warning (275008): Primitive "AND2" of instance "inst148" not used
+Warning (275008): Primitive "AND2" of instance "inst149" not used
+Warning (275008): Primitive "DFF" of instance "inst150" not used
+Warning (275008): Primitive "VCC" of instance "inst151" not used
+Warning (275008): Primitive "VCC" of instance "inst152" not used
+Warning (275008): Primitive "DFF" of instance "inst153" not used
+Warning (275008): Primitive "VCC" of instance "inst154" not used
+Warning (275008): Primitive "VCC" of instance "inst155" not used
+Warning (275008): Primitive "AND2" of instance "inst156" not used
+Warning (275008): Primitive "AND2" of instance "inst157" not used
+Warning (275008): Primitive "DFF" of instance "inst158" not used
+Warning (275008): Primitive "VCC" of instance "inst159" not used
+Warning (275008): Primitive "VCC" of instance "inst160" not used
+Warning (275008): Primitive "DFF" of instance "inst161" not used
+Warning (275008): Primitive "VCC" of instance "inst162" not used
+Warning (275008): Primitive "VCC" of instance "inst163" not used
+Warning (275008): Primitive "AND2" of instance "inst164" not used
+Warning (275008): Primitive "AND2" of instance "inst165" not used
+Warning (275008): Primitive "DFF" of instance "inst166" not used
+Warning (275008): Primitive "VCC" of instance "inst167" not used
+Warning (275008): Primitive "VCC" of instance "inst168" not used
+Warning (275008): Primitive "DFF" of instance "inst169" not used
+Warning (275008): Primitive "AND4" of instance "inst17" not used
+Warning (275008): Primitive "VCC" of instance "inst170" not used
+Warning (275008): Primitive "VCC" of instance "inst171" not used
+Warning (275008): Primitive "AND2" of instance "inst172" not used
+Warning (275008): Primitive "AND2" of instance "inst173" not used
+Warning (275008): Primitive "OR8" of instance "inst174" not used
+Warning (275008): Primitive "DFF" of instance "inst175" not used
+Warning (275008): Primitive "VCC" of instance "inst176" not used
+Warning (275008): Primitive "VCC" of instance "inst177" not used
+Warning (275008): Primitive "DFF" of instance "inst178" not used
+Warning (275008): Primitive "VCC" of instance "inst179" not used
+Warning (275008): Primitive "AND4" of instance "inst18" not used
+Warning (275008): Primitive "VCC" of instance "inst180" not used
+Warning (275008): Primitive "AND2" of instance "inst181" not used
+Warning (275008): Primitive "AND2" of instance "inst182" not used
+Warning (275008): Primitive "DFF" of instance "inst183" not used
+Warning (275008): Primitive "VCC" of instance "inst184" not used
+Warning (275008): Primitive "VCC" of instance "inst185" not used
+Warning (275008): Primitive "DFF" of instance "inst186" not used
+Warning (275008): Primitive "VCC" of instance "inst187" not used
+Warning (275008): Primitive "VCC" of instance "inst188" not used
+Warning (275008): Primitive "AND2" of instance "inst189" not used
+Warning (275008): Primitive "AND4" of instance "inst19" not used
+Warning (275008): Primitive "AND2" of instance "inst190" not used
+Warning (275008): Primitive "DFF" of instance "inst191" not used
+Warning (275008): Primitive "VCC" of instance "inst192" not used
+Warning (275008): Primitive "VCC" of instance "inst193" not used
+Warning (275008): Primitive "DFF" of instance "inst194" not used
+Warning (275008): Primitive "VCC" of instance "inst195" not used
+Warning (275008): Primitive "VCC" of instance "inst196" not used
+Warning (275008): Primitive "AND2" of instance "inst197" not used
+Warning (275008): Primitive "AND2" of instance "inst198" not used
+Warning (275008): Primitive "DFF" of instance "inst199" not used
+Warning (275008): Primitive "NOT" of instance "inst2" not used
+Warning (275008): Primitive "AND4" of instance "inst20" not used
+Warning (275008): Primitive "VCC" of instance "inst200" not used
+Warning (275008): Primitive "DFF" of instance "inst201" not used
+Warning (275008): Primitive "VCC" of instance "inst202" not used
+Warning (275008): Primitive "VCC" of instance "inst203" not used
+Warning (275008): Primitive "AND2" of instance "inst204" not used
+Warning (275008): Primitive "AND2" of instance "inst205" not used
+Warning (275008): Primitive "OR8" of instance "inst206" not used
+Warning (275008): Primitive "DFF" of instance "inst207" not used
+Warning (275008): Primitive "VCC" of instance "inst208" not used
+Warning (275008): Primitive "VCC" of instance "inst209" not used
+Warning (275008): Primitive "AND4" of instance "inst21" not used
+Warning (275008): Primitive "DFF" of instance "inst210" not used
+Warning (275008): Primitive "VCC" of instance "inst211" not used
+Warning (275008): Primitive "VCC" of instance "inst212" not used
+Warning (275008): Primitive "AND2" of instance "inst213" not used
+Warning (275008): Primitive "AND2" of instance "inst214" not used
+Warning (275008): Primitive "DFF" of instance "inst215" not used
+Warning (275008): Primitive "VCC" of instance "inst216" not used
+Warning (275008): Primitive "VCC" of instance "inst217" not used
+Warning (275008): Primitive "DFF" of instance "inst218" not used
+Warning (275008): Primitive "VCC" of instance "inst219" not used
+Warning (275008): Primitive "AND4" of instance "inst22" not used
+Warning (275008): Primitive "VCC" of instance "inst220" not used
+Warning (275008): Primitive "AND2" of instance "inst221" not used
+Warning (275008): Primitive "AND2" of instance "inst222" not used
+Warning (275008): Primitive "DFF" of instance "inst223" not used
+Warning (275008): Primitive "VCC" of instance "inst224" not used
+Warning (275008): Primitive "VCC" of instance "inst225" not used
+Warning (275008): Primitive "DFF" of instance "inst226" not used
+Warning (275008): Primitive "VCC" of instance "inst227" not used
+Warning (275008): Primitive "VCC" of instance "inst228" not used
+Warning (275008): Primitive "AND2" of instance "inst229" not used
+Warning (275008): Primitive "AND4" of instance "inst23" not used
+Warning (275008): Primitive "AND2" of instance "inst230" not used
+Warning (275008): Primitive "DFF" of instance "inst231" not used
+Warning (275008): Primitive "VCC" of instance "inst232" not used
+Warning (275008): Primitive "VCC" of instance "inst233" not used
+Warning (275008): Primitive "DFF" of instance "inst234" not used
+Warning (275008): Primitive "VCC" of instance "inst235" not used
+Warning (275008): Primitive "VCC" of instance "inst236" not used
+Warning (275008): Primitive "AND2" of instance "inst237" not used
+Warning (275008): Primitive "AND2" of instance "inst238" not used
+Warning (275008): Primitive "OR8" of instance "inst239" not used
+Warning (275008): Primitive "AND4" of instance "inst24" not used
+Warning (275008): Primitive "DFF" of instance "inst240" not used
+Warning (275008): Primitive "VCC" of instance "inst241" not used
+Warning (275008): Primitive "VCC" of instance "inst242" not used
+Warning (275008): Primitive "DFF" of instance "inst243" not used
+Warning (275008): Primitive "VCC" of instance "inst244" not used
+Warning (275008): Primitive "VCC" of instance "inst245" not used
+Warning (275008): Primitive "AND2" of instance "inst246" not used
+Warning (275008): Primitive "AND2" of instance "inst247" not used
+Warning (275008): Primitive "DFF" of instance "inst248" not used
+Warning (275008): Primitive "VCC" of instance "inst249" not used
+Warning (275008): Primitive "VCC" of instance "inst250" not used
+Warning (275008): Primitive "DFF" of instance "inst251" not used
+Warning (275008): Primitive "VCC" of instance "inst252" not used
+Warning (275008): Primitive "VCC" of instance "inst253" not used
+Warning (275008): Primitive "AND2" of instance "inst254" not used
+Warning (275008): Primitive "AND2" of instance "inst255" not used
+Warning (275008): Primitive "DFF" of instance "inst256" not used
+Warning (275008): Primitive "VCC" of instance "inst257" not used
+Warning (275008): Primitive "VCC" of instance "inst258" not used
+Warning (275008): Primitive "DFF" of instance "inst259" not used
+Warning (275008): Primitive "VCC" of instance "inst260" not used
+Warning (275008): Primitive "VCC" of instance "inst261" not used
+Warning (275008): Primitive "AND2" of instance "inst262" not used
+Warning (275008): Primitive "AND2" of instance "inst263" not used
+Warning (275008): Primitive "DFF" of instance "inst264" not used
+Warning (275008): Primitive "VCC" of instance "inst265" not used
+Warning (275008): Primitive "DFF" of instance "inst266" not used
+Warning (275008): Primitive "VCC" of instance "inst267" not used
+Warning (275008): Primitive "VCC" of instance "inst268" not used
+Warning (275008): Primitive "AND2" of instance "inst269" not used
+Warning (275008): Primitive "AND2" of instance "inst270" not used
+Warning (275008): Primitive "OR8" of instance "inst271" not used
+Warning (275008): Primitive "DFF" of instance "inst272" not used
+Warning (275008): Primitive "VCC" of instance "inst273" not used
+Warning (275008): Primitive "VCC" of instance "inst274" not used
+Warning (275008): Primitive "DFF" of instance "inst275" not used
+Warning (275008): Primitive "VCC" of instance "inst276" not used
+Warning (275008): Primitive "VCC" of instance "inst277" not used
+Warning (275008): Primitive "AND2" of instance "inst278" not used
+Warning (275008): Primitive "AND2" of instance "inst279" not used
+Warning (275008): Primitive "DFF" of instance "inst28" not used
+Warning (275008): Primitive "DFF" of instance "inst280" not used
+Warning (275008): Primitive "VCC" of instance "inst281" not used
+Warning (275008): Primitive "VCC" of instance "inst282" not used
+Warning (275008): Primitive "DFF" of instance "inst283" not used
+Warning (275008): Primitive "VCC" of instance "inst284" not used
+Warning (275008): Primitive "VCC" of instance "inst285" not used
+Warning (275008): Primitive "AND2" of instance "inst286" not used
+Warning (275008): Primitive "AND2" of instance "inst287" not used
+Warning (275008): Primitive "DFF" of instance "inst288" not used
+Warning (275008): Primitive "VCC" of instance "inst289" not used
+Warning (275008): Primitive "DFF" of instance "inst29" not used
+Warning (275008): Primitive "VCC" of instance "inst290" not used
+Warning (275008): Primitive "DFF" of instance "inst291" not used
+Warning (275008): Primitive "VCC" of instance "inst292" not used
+Warning (275008): Primitive "VCC" of instance "inst293" not used
+Warning (275008): Primitive "AND2" of instance "inst294" not used
+Warning (275008): Primitive "AND2" of instance "inst295" not used
+Warning (275008): Primitive "AND2" of instance "inst296" not used
+Warning (275008): Primitive "AND2" of instance "inst297" not used
+Warning (275008): Primitive "AND2" of instance "inst298" not used
+Warning (275008): Primitive "AND2" of instance "inst299" not used
+Warning (275008): Primitive "NOT" of instance "inst3" not used
+Warning (275008): Primitive "VCC" of instance "inst30" not used
+Warning (275008): Primitive "AND2" of instance "inst300" not used
+Warning (275008): Primitive "AND2" of instance "inst301" not used
+Warning (275008): Primitive "AND2" of instance "inst302" not used
+Warning (275008): Primitive "AND2" of instance "inst303" not used
+Warning (275008): Primitive "DFF" of instance "inst304" not used
+Warning (275008): Primitive "VCC" of instance "inst305" not used
+Warning (275008): Primitive "VCC" of instance "inst306" not used
+Warning (275008): Primitive "DFF" of instance "inst307" not used
+Warning (275008): Primitive "VCC" of instance "inst308" not used
+Warning (275008): Primitive "VCC" of instance "inst309" not used
+Warning (275008): Primitive "VCC" of instance "inst31" not used
+Warning (275008): Primitive "AND2" of instance "inst310" not used
+Warning (275008): Primitive "AND2" of instance "inst311" not used
+Warning (275008): Primitive "OR8" of instance "inst312" not used
+Warning (275008): Primitive "DFF" of instance "inst313" not used
+Warning (275008): Primitive "VCC" of instance "inst314" not used
+Warning (275008): Primitive "VCC" of instance "inst315" not used
+Warning (275008): Primitive "DFF" of instance "inst316" not used
+Warning (275008): Primitive "VCC" of instance "inst317" not used
+Warning (275008): Primitive "VCC" of instance "inst318" not used
+Warning (275008): Primitive "AND2" of instance "inst319" not used
+Warning (275008): Primitive "OR8" of instance "inst32" not used
+Warning (275008): Primitive "AND2" of instance "inst320" not used
+Warning (275008): Primitive "DFF" of instance "inst321" not used
+Warning (275008): Primitive "VCC" of instance "inst322" not used
+Warning (275008): Primitive "VCC" of instance "inst323" not used
+Warning (275008): Primitive "DFF" of instance "inst324" not used
+Warning (275008): Primitive "VCC" of instance "inst325" not used
+Warning (275008): Primitive "VCC" of instance "inst326" not used
+Warning (275008): Primitive "AND2" of instance "inst327" not used
+Warning (275008): Primitive "AND2" of instance "inst328" not used
+Warning (275008): Primitive "DFF" of instance "inst329" not used
+Warning (275008): Primitive "VCC" of instance "inst33" not used
+Warning (275008): Primitive "VCC" of instance "inst330" not used
+Warning (275008): Primitive "VCC" of instance "inst331" not used
+Warning (275008): Primitive "DFF" of instance "inst332" not used
+Warning (275008): Primitive "VCC" of instance "inst333" not used
+Warning (275008): Primitive "VCC" of instance "inst334" not used
+Warning (275008): Primitive "AND2" of instance "inst335" not used
+Warning (275008): Primitive "AND2" of instance "inst336" not used
+Warning (275008): Primitive "DFF" of instance "inst337" not used
+Warning (275008): Primitive "VCC" of instance "inst338" not used
+Warning (275008): Primitive "DFF" of instance "inst339" not used
+Warning (275008): Primitive "VCC" of instance "inst34" not used
+Warning (275008): Primitive "VCC" of instance "inst340" not used
+Warning (275008): Primitive "VCC" of instance "inst341" not used
+Warning (275008): Primitive "AND2" of instance "inst342" not used
+Warning (275008): Primitive "AND2" of instance "inst343" not used
+Warning (275008): Primitive "OR8" of instance "inst344" not used
+Warning (275008): Primitive "DFF" of instance "inst345" not used
+Warning (275008): Primitive "VCC" of instance "inst346" not used
+Warning (275008): Primitive "VCC" of instance "inst347" not used
+Warning (275008): Primitive "DFF" of instance "inst348" not used
+Warning (275008): Primitive "VCC" of instance "inst349" not used
+Warning (275008): Primitive "DFF" of instance "inst35" not used
+Warning (275008): Primitive "VCC" of instance "inst350" not used
+Warning (275008): Primitive "AND2" of instance "inst351" not used
+Warning (275008): Primitive "AND2" of instance "inst352" not used
+Warning (275008): Primitive "DFF" of instance "inst353" not used
+Warning (275008): Primitive "VCC" of instance "inst354" not used
+Warning (275008): Primitive "VCC" of instance "inst355" not used
+Warning (275008): Primitive "DFF" of instance "inst356" not used
+Warning (275008): Primitive "VCC" of instance "inst357" not used
+Warning (275008): Primitive "VCC" of instance "inst358" not used
+Warning (275008): Primitive "AND2" of instance "inst359" not used
+Warning (275008): Primitive "VCC" of instance "inst36" not used
+Warning (275008): Primitive "AND2" of instance "inst360" not used
+Warning (275008): Primitive "DFF" of instance "inst361" not used
+Warning (275008): Primitive "VCC" of instance "inst362" not used
+Warning (275008): Primitive "VCC" of instance "inst363" not used
+Warning (275008): Primitive "DFF" of instance "inst364" not used
+Warning (275008): Primitive "VCC" of instance "inst365" not used
+Warning (275008): Primitive "VCC" of instance "inst366" not used
+Warning (275008): Primitive "AND2" of instance "inst367" not used
+Warning (275008): Primitive "AND2" of instance "inst368" not used
+Warning (275008): Primitive "DFF" of instance "inst369" not used
+Warning (275008): Primitive "VCC" of instance "inst37" not used
+Warning (275008): Primitive "VCC" of instance "inst370" not used
+Warning (275008): Primitive "VCC" of instance "inst371" not used
+Warning (275008): Primitive "DFF" of instance "inst372" not used
+Warning (275008): Primitive "VCC" of instance "inst373" not used
+Warning (275008): Primitive "VCC" of instance "inst374" not used
+Warning (275008): Primitive "AND2" of instance "inst375" not used
+Warning (275008): Primitive "AND2" of instance "inst376" not used
+Warning (275008): Primitive "OR8" of instance "inst377" not used
+Warning (275008): Primitive "DFF" of instance "inst378" not used
+Warning (275008): Primitive "VCC" of instance "inst379" not used
+Warning (275008): Primitive "AND2" of instance "inst38" not used
+Warning (275008): Primitive "VCC" of instance "inst380" not used
+Warning (275008): Primitive "DFF" of instance "inst381" not used
+Warning (275008): Primitive "VCC" of instance "inst382" not used
+Warning (275008): Primitive "VCC" of instance "inst383" not used
+Warning (275008): Primitive "AND2" of instance "inst384" not used
+Warning (275008): Primitive "AND2" of instance "inst385" not used
+Warning (275008): Primitive "DFF" of instance "inst386" not used
+Warning (275008): Primitive "VCC" of instance "inst387" not used
+Warning (275008): Primitive "VCC" of instance "inst388" not used
+Warning (275008): Primitive "DFF" of instance "inst389" not used
+Warning (275008): Primitive "AND2" of instance "inst39" not used
+Warning (275008): Primitive "VCC" of instance "inst390" not used
+Warning (275008): Primitive "VCC" of instance "inst391" not used
+Warning (275008): Primitive "AND2" of instance "inst392" not used
+Warning (275008): Primitive "AND2" of instance "inst393" not used
+Warning (275008): Primitive "DFF" of instance "inst394" not used
+Warning (275008): Primitive "VCC" of instance "inst395" not used
+Warning (275008): Primitive "VCC" of instance "inst396" not used
+Warning (275008): Primitive "DFF" of instance "inst397" not used
+Warning (275008): Primitive "VCC" of instance "inst398" not used
+Warning (275008): Primitive "VCC" of instance "inst399" not used
+Warning (275008): Primitive "NOT" of instance "inst4" not used
+Warning (275008): Primitive "DFF" of instance "inst40" not used
+Warning (275008): Primitive "AND2" of instance "inst400" not used
+Warning (275008): Primitive "AND2" of instance "inst401" not used
+Warning (275008): Primitive "DFF" of instance "inst402" not used
+Warning (275008): Primitive "VCC" of instance "inst403" not used
+Warning (275008): Primitive "DFF" of instance "inst404" not used
+Warning (275008): Primitive "VCC" of instance "inst405" not used
+Warning (275008): Primitive "VCC" of instance "inst406" not used
+Warning (275008): Primitive "AND2" of instance "inst407" not used
+Warning (275008): Primitive "AND2" of instance "inst408" not used
+Warning (275008): Primitive "OR8" of instance "inst409" not used
+Warning (275008): Primitive "VCC" of instance "inst41" not used
+Warning (275008): Primitive "DFF" of instance "inst410" not used
+Warning (275008): Primitive "VCC" of instance "inst411" not used
+Warning (275008): Primitive "VCC" of instance "inst412" not used
+Warning (275008): Primitive "DFF" of instance "inst413" not used
+Warning (275008): Primitive "VCC" of instance "inst414" not used
+Warning (275008): Primitive "VCC" of instance "inst415" not used
+Warning (275008): Primitive "AND2" of instance "inst416" not used
+Warning (275008): Primitive "AND2" of instance "inst417" not used
+Warning (275008): Primitive "DFF" of instance "inst418" not used
+Warning (275008): Primitive "VCC" of instance "inst419" not used
+Warning (275008): Primitive "VCC" of instance "inst42" not used
+Warning (275008): Primitive "VCC" of instance "inst420" not used
+Warning (275008): Primitive "DFF" of instance "inst421" not used
+Warning (275008): Primitive "VCC" of instance "inst422" not used
+Warning (275008): Primitive "VCC" of instance "inst423" not used
+Warning (275008): Primitive "AND2" of instance "inst424" not used
+Warning (275008): Primitive "AND2" of instance "inst425" not used
+Warning (275008): Primitive "DFF" of instance "inst426" not used
+Warning (275008): Primitive "VCC" of instance "inst427" not used
+Warning (275008): Primitive "VCC" of instance "inst428" not used
+Warning (275008): Primitive "DFF" of instance "inst429" not used
+Warning (275008): Primitive "AND2" of instance "inst43" not used
+Warning (275008): Primitive "VCC" of instance "inst430" not used
+Warning (275008): Primitive "VCC" of instance "inst431" not used
+Warning (275008): Primitive "AND2" of instance "inst432" not used
+Warning (275008): Primitive "AND2" of instance "inst433" not used
+Warning (275008): Primitive "DFF" of instance "inst434" not used
+Warning (275008): Primitive "VCC" of instance "inst435" not used
+Warning (275008): Primitive "VCC" of instance "inst436" not used
+Warning (275008): Primitive "DFF" of instance "inst437" not used
+Warning (275008): Primitive "VCC" of instance "inst438" not used
+Warning (275008): Primitive "VCC" of instance "inst439" not used
+Warning (275008): Primitive "AND2" of instance "inst44" not used
+Warning (275008): Primitive "AND2" of instance "inst440" not used
+Warning (275008): Primitive "AND2" of instance "inst441" not used
+Warning (275008): Primitive "OR8" of instance "inst442" not used
+Warning (275008): Primitive "DFF" of instance "inst443" not used
+Warning (275008): Primitive "VCC" of instance "inst444" not used
+Warning (275008): Primitive "VCC" of instance "inst445" not used
+Warning (275008): Primitive "DFF" of instance "inst446" not used
+Warning (275008): Primitive "VCC" of instance "inst447" not used
+Warning (275008): Primitive "VCC" of instance "inst448" not used
+Warning (275008): Primitive "AND2" of instance "inst449" not used
+Warning (275008): Primitive "DFF" of instance "inst45" not used
+Warning (275008): Primitive "AND2" of instance "inst450" not used
+Warning (275008): Primitive "DFF" of instance "inst451" not used
+Warning (275008): Primitive "VCC" of instance "inst452" not used
+Warning (275008): Primitive "VCC" of instance "inst453" not used
+Warning (275008): Primitive "DFF" of instance "inst454" not used
+Warning (275008): Primitive "VCC" of instance "inst455" not used
+Warning (275008): Primitive "VCC" of instance "inst456" not used
+Warning (275008): Primitive "AND2" of instance "inst457" not used
+Warning (275008): Primitive "AND2" of instance "inst458" not used
+Warning (275008): Primitive "DFF" of instance "inst459" not used
+Warning (275008): Primitive "VCC" of instance "inst46" not used
+Warning (275008): Primitive "VCC" of instance "inst460" not used
+Warning (275008): Primitive "VCC" of instance "inst461" not used
+Warning (275008): Primitive "DFF" of instance "inst462" not used
+Warning (275008): Primitive "VCC" of instance "inst463" not used
+Warning (275008): Primitive "VCC" of instance "inst464" not used
+Warning (275008): Primitive "AND2" of instance "inst465" not used
+Warning (275008): Primitive "AND2" of instance "inst466" not used
+Warning (275008): Primitive "DFF" of instance "inst467" not used
+Warning (275008): Primitive "VCC" of instance "inst468" not used
+Warning (275008): Primitive "DFF" of instance "inst469" not used
+Warning (275008): Primitive "VCC" of instance "inst47" not used
+Warning (275008): Primitive "VCC" of instance "inst470" not used
+Warning (275008): Primitive "VCC" of instance "inst471" not used
+Warning (275008): Primitive "AND2" of instance "inst472" not used
+Warning (275008): Primitive "AND2" of instance "inst473" not used
+Warning (275008): Primitive "OR8" of instance "inst474" not used
+Warning (275008): Primitive "DFF" of instance "inst475" not used
+Warning (275008): Primitive "VCC" of instance "inst476" not used
+Warning (275008): Primitive "VCC" of instance "inst477" not used
+Warning (275008): Primitive "DFF" of instance "inst478" not used
+Warning (275008): Primitive "VCC" of instance "inst479" not used
+Warning (275008): Primitive "DFF" of instance "inst48" not used
+Warning (275008): Primitive "VCC" of instance "inst480" not used
+Warning (275008): Primitive "AND2" of instance "inst481" not used
+Warning (275008): Primitive "AND2" of instance "inst482" not used
+Warning (275008): Primitive "DFF" of instance "inst483" not used
+Warning (275008): Primitive "VCC" of instance "inst484" not used
+Warning (275008): Primitive "VCC" of instance "inst485" not used
+Warning (275008): Primitive "DFF" of instance "inst486" not used
+Warning (275008): Primitive "VCC" of instance "inst487" not used
+Warning (275008): Primitive "VCC" of instance "inst488" not used
+Warning (275008): Primitive "AND2" of instance "inst489" not used
+Warning (275008): Primitive "VCC" of instance "inst49" not used
+Warning (275008): Primitive "AND2" of instance "inst490" not used
+Warning (275008): Primitive "DFF" of instance "inst491" not used
+Warning (275008): Primitive "VCC" of instance "inst492" not used
+Warning (275008): Primitive "VCC" of instance "inst493" not used
+Warning (275008): Primitive "DFF" of instance "inst494" not used
+Warning (275008): Primitive "VCC" of instance "inst495" not used
+Warning (275008): Primitive "VCC" of instance "inst496" not used
+Warning (275008): Primitive "AND2" of instance "inst497" not used
+Warning (275008): Primitive "AND2" of instance "inst498" not used
+Warning (275008): Primitive "DFF" of instance "inst499" not used
+Warning (275008): Primitive "NOT" of instance "inst5" not used
+Warning (275008): Primitive "VCC" of instance "inst50" not used
+Warning (275008): Primitive "VCC" of instance "inst500" not used
+Warning (275008): Primitive "VCC" of instance "inst501" not used
+Warning (275008): Primitive "DFF" of instance "inst502" not used
+Warning (275008): Primitive "VCC" of instance "inst503" not used
+Warning (275008): Primitive "VCC" of instance "inst504" not used
+Warning (275008): Primitive "AND2" of instance "inst505" not used
+Warning (275008): Primitive "AND2" of instance "inst506" not used
+Warning (275008): Primitive "OR8" of instance "inst507" not used
+Warning (275008): Primitive "DFF" of instance "inst508" not used
+Warning (275008): Primitive "VCC" of instance "inst509" not used
+Warning (275008): Primitive "AND2" of instance "inst51" not used
+Warning (275008): Primitive "VCC" of instance "inst510" not used
+Warning (275008): Primitive "DFF" of instance "inst511" not used
+Warning (275008): Primitive "VCC" of instance "inst512" not used
+Warning (275008): Primitive "VCC" of instance "inst513" not used
+Warning (275008): Primitive "AND2" of instance "inst514" not used
+Warning (275008): Primitive "AND2" of instance "inst515" not used
+Warning (275008): Primitive "DFF" of instance "inst516" not used
+Warning (275008): Primitive "VCC" of instance "inst517" not used
+Warning (275008): Primitive "VCC" of instance "inst518" not used
+Warning (275008): Primitive "DFF" of instance "inst519" not used
+Warning (275008): Primitive "AND2" of instance "inst52" not used
+Warning (275008): Primitive "VCC" of instance "inst520" not used
+Warning (275008): Primitive "VCC" of instance "inst521" not used
+Warning (275008): Primitive "AND2" of instance "inst522" not used
+Warning (275008): Primitive "AND2" of instance "inst523" not used
+Warning (275008): Primitive "DFF" of instance "inst524" not used
+Warning (275008): Primitive "VCC" of instance "inst525" not used
+Warning (275008): Primitive "VCC" of instance "inst526" not used
+Warning (275008): Primitive "DFF" of instance "inst527" not used
+Warning (275008): Primitive "VCC" of instance "inst528" not used
+Warning (275008): Primitive "VCC" of instance "inst529" not used
+Warning (275008): Primitive "DFF" of instance "inst53" not used
+Warning (275008): Primitive "AND2" of instance "inst530" not used
+Warning (275008): Primitive "AND2" of instance "inst531" not used
+Warning (275008): Primitive "DFF" of instance "inst532" not used
+Warning (275008): Primitive "VCC" of instance "inst533" not used
+Warning (275008): Primitive "DFF" of instance "inst534" not used
+Warning (275008): Primitive "VCC" of instance "inst535" not used
+Warning (275008): Primitive "VCC" of instance "inst536" not used
+Warning (275008): Primitive "AND2" of instance "inst537" not used
+Warning (275008): Primitive "AND2" of instance "inst538" not used
+Warning (275008): Primitive "OR8" of instance "inst539" not used
+Warning (275008): Primitive "VCC" of instance "inst54" not used
+Warning (275008): Primitive "DFF" of instance "inst540" not used
+Warning (275008): Primitive "VCC" of instance "inst541" not used
+Warning (275008): Primitive "VCC" of instance "inst542" not used
+Warning (275008): Primitive "DFF" of instance "inst543" not used
+Warning (275008): Primitive "VCC" of instance "inst544" not used
+Warning (275008): Primitive "VCC" of instance "inst545" not used
+Warning (275008): Primitive "AND2" of instance "inst546" not used
+Warning (275008): Primitive "AND2" of instance "inst547" not used
+Warning (275008): Primitive "DFF" of instance "inst548" not used
+Warning (275008): Primitive "VCC" of instance "inst549" not used
+Warning (275008): Primitive "VCC" of instance "inst55" not used
+Warning (275008): Primitive "VCC" of instance "inst550" not used
+Warning (275008): Primitive "DFF" of instance "inst551" not used
+Warning (275008): Primitive "VCC" of instance "inst552" not used
+Warning (275008): Primitive "VCC" of instance "inst553" not used
+Warning (275008): Primitive "AND2" of instance "inst554" not used
+Warning (275008): Primitive "AND2" of instance "inst555" not used
+Warning (275008): Primitive "DFF" of instance "inst556" not used
+Warning (275008): Primitive "VCC" of instance "inst557" not used
+Warning (275008): Primitive "VCC" of instance "inst558" not used
+Warning (275008): Primitive "DFF" of instance "inst559" not used
+Warning (275008): Primitive "DFF" of instance "inst56" not used
+Warning (275008): Primitive "VCC" of instance "inst560" not used
+Warning (275008): Primitive "VCC" of instance "inst561" not used
+Warning (275008): Primitive "AND2" of instance "inst562" not used
+Warning (275008): Primitive "AND2" of instance "inst563" not used
+Warning (275008): Primitive "OR2" of instance "inst564" not used
+Warning (275008): Primitive "OR2" of instance "inst565" not used
+Warning (275008): Primitive "OR2" of instance "inst566" not used
+Warning (275008): Primitive "OR2" of instance "inst567" not used
+Warning (275008): Primitive "OR2" of instance "inst568" not used
+Warning (275008): Primitive "OR2" of instance "inst569" not used
+Warning (275008): Primitive "VCC" of instance "inst57" not used
+Warning (275008): Primitive "OR2" of instance "inst570" not used
+Warning (275008): Primitive "OR2" of instance "inst571" not used
+Warning (275008): Primitive "NOT" of instance "inst572" not used
+Warning (275008): Primitive "VCC" of instance "inst58" not used
+Warning (275008): Primitive "AND2" of instance "inst59" not used
+Warning (275008): Primitive "NOT" of instance "inst6" not used
+Warning (275008): Primitive "AND2" of instance "inst60" not used
+Warning (275008): Primitive "AND2" of instance "inst61" not used
+Warning (275008): Primitive "AND2" of instance "inst62" not used
+Warning (275008): Primitive "AND2" of instance "inst63" not used
+Warning (275008): Primitive "AND2" of instance "inst64" not used
+Warning (275008): Primitive "AND2" of instance "inst65" not used
+Warning (275008): Primitive "AND2" of instance "inst66" not used
+Warning (275008): Primitive "AND2" of instance "inst67" not used
+Warning (275008): Primitive "AND2" of instance "inst68" not used
+Warning (275008): Primitive "DFF" of instance "inst69" not used
+Warning (275008): Primitive "VCC" of instance "inst70" not used
+Warning (275008): Primitive "DFF" of instance "inst71" not used
+Warning (275008): Primitive "VCC" of instance "inst72" not used
+Warning (275008): Primitive "VCC" of instance "inst73" not used
+Warning (275008): Primitive "AND2" of instance "inst74" not used
+Warning (275008): Primitive "AND2" of instance "inst75" not used
+Warning (275008): Primitive "OR8" of instance "inst76" not used
+Warning (275008): Primitive "DFF" of instance "inst77" not used
+Warning (275008): Primitive "VCC" of instance "inst78" not used
+Warning (275008): Primitive "VCC" of instance "inst79" not used
+Warning (275008): Primitive "DFF" of instance "inst80" not used
+Warning (275008): Primitive "VCC" of instance "inst81" not used
+Warning (275008): Primitive "VCC" of instance "inst82" not used
+Warning (275008): Primitive "AND2" of instance "inst83" not used
+Warning (275008): Primitive "AND2" of instance "inst84" not used
+Warning (275008): Primitive "DFF" of instance "inst85" not used
+Warning (275008): Primitive "VCC" of instance "inst86" not used
+Warning (275008): Primitive "VCC" of instance "inst87" not used
+Warning (275008): Primitive "DFF" of instance "inst88" not used
+Warning (275008): Primitive "VCC" of instance "inst89" not used
+Warning (275008): Primitive "VCC" of instance "inst90" not used
+Warning (275008): Primitive "AND2" of instance "inst91" not used
+Warning (275008): Primitive "AND2" of instance "inst92" not used
+Warning (275008): Primitive "DFF" of instance "inst93" not used
+Warning (275008): Primitive "VCC" of instance "inst94" not used
+Warning (275008): Primitive "VCC" of instance "inst95" not used
+Warning (275008): Primitive "DFF" of instance "inst96" not used
+Warning (275008): Primitive "VCC" of instance "inst97" not used
+Warning (275008): Primitive "VCC" of instance "inst98" not used
+Warning (275008): Primitive "AND2" of instance "inst99" not used
+Warning (12158): Entity "RAM" contains only dangling pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 370 megabytes
-    Info: Processing ended: Fri Jul 11 10:19:12 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "C2"
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 565 warnings
+    Info: Peak virtual memory: 358 megabytes
+    Info: Processing ended: Wed Aug  6 21:05:48 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:12
 
 
