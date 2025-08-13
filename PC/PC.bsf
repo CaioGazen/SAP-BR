@@ -1,0 +1,121 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 280 280)
+	(text "PC" (rect 5 0 23 17)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 1 199 22 214)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PC_IN_0" (rect 0 0 55 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_IN_0" (rect 21 27 76 44)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "PC_IN_1" (rect 0 0 55 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_IN_1" (rect 21 43 76 60)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "PC_IN_2" (rect 0 0 55 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_IN_2" (rect 21 59 76 76)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "PC_IN_3" (rect 0 0 55 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_IN_3" (rect 21 75 76 92)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "PC_INC" (rect 0 0 48 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_INC" (rect 21 115 69 132)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "CLOCK" (rect 0 0 46 17)(font "Intel Clear" (font_size 8)))
+		(text "CLOCK" (rect 21 131 67 148)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 136)(pt 16 136))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "_PC_OUT" (rect 0 0 63 17)(font "Intel Clear" (font_size 8)))
+		(text "_PC_OUT" (rect 24 176 87 193)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 184)(pt 16 184))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "_JMP" (rect 0 0 35 17)(font "Intel Clear" (font_size 8)))
+		(text "_JMP" (rect 24 144 59 161)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 152)(pt 16 152))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "_RESET" (rect 0 0 51 17)(font "Intel Clear" (font_size 8)))
+		(text "_RESET" (rect 24 160 75 177)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 168)(pt 16 168))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "PC_OUT_0" (rect 32 0 102 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_OUT_0" (rect 125 27 195 44)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "PC_OUT_1" (rect 32 0 102 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_OUT_1" (rect 125 43 195 60)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 48)(pt 200 48))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "PC_OUT_2" (rect 32 0 102 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_OUT_2" (rect 125 59 195 76)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 64)(pt 200 64))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "PC_OUT_3" (rect 32 0 102 17)(font "Intel Clear" (font_size 8)))
+		(text "PC_OUT_3" (rect 125 75 195 92)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 80)(pt 200 80))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 200))
+	)
+)
