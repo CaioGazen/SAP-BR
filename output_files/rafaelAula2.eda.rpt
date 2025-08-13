@@ -1,5 +1,5 @@
 EDA Netlist Writer report for rafaelAula2
-Sun Aug  3 20:04:35 2025
+Tue Aug 12 23:36:02 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Aug  3 20:04:35 2025 ;
+; EDA Netlist Writer Status ; Successful - Tue Aug 12 23:36:02 2025 ;
 ; Revision Name             ; rafaelAula2                           ;
-; Top-level Entity Name     ; DM74LS138                             ;
+; Top-level Entity Name     ; EEPROM_53x18_FULL                     ;
 ; Family                    ; MAX 10                                ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -95,13 +95,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Aug  3 20:04:35 2025
+    Info: Processing started: Tue Aug 12 23:36:02 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/civ/SAP-BR/simulation/qsim/ rafaelAula2 -c rafaelAula2
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file rafaelAula2.vo in folder "/home/civ/SAP-BR/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 598 megabytes
-    Info: Processing ended: Sun Aug  3 20:04:35 2025
+    Info: Processing ended: Tue Aug 12 23:36:02 2025
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

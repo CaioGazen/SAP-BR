@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Aug  6 21:05:48 2025
+Analysis & Synthesis Status : Successful - Tue Aug 12 23:30:29 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : rafaelAula2
-Top-level Entity Name : RAM
+Top-level Entity Name : EEPROM_53x18_FULL
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
+Total logic elements : 43
+    Total combinational functions : 43
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 1
+Total pins : 25
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
