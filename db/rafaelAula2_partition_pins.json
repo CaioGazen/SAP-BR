@@ -2,7 +2,108 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "HLT",
+					"strict" : false
+				},
+				{
+					"name" : "PC_INC",
+					"strict" : false
+				},
+				{
+					"name" : "JMP",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_IN",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_IN",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "IR_IN",
+					"strict" : false
+				},
+				{
+					"name" : "IR_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "ACC_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "ACC_IN",
+					"strict" : false
+				},
+				{
+					"name" : "SUB",
+					"strict" : false
+				},
+				{
+					"name" : "AL_1",
+					"strict" : false
+				},
+				{
+					"name" : "AL_0",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "NOT",
+					"strict" : false
+				},
+				{
+					"name" : "BR_IN",
+					"strict" : false
+				},
+				{
+					"name" : "OPR_IN",
+					"strict" : false
+				},
+				{
+					"name" : "IN_0",
+					"strict" : false
+				},
+				{
+					"name" : "IN_1",
+					"strict" : false
+				},
+				{
+					"name" : "IN_2",
+					"strict" : false
+				},
+				{
+					"name" : "IN_6",
+					"strict" : false
+				},
+				{
+					"name" : "IN_5",
+					"strict" : false
+				},
+				{
+					"name" : "IN_4",
+					"strict" : false
+				},
+				{
+					"name" : "IN_3",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
