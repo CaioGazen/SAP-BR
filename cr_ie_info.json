@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "linux64",
+		"os_name" : "\\S{PRETTY_NAME} \\r",
+		"os_version" : ""
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "file_db->add(this)",
+		"source_file" : "/quartus/edt/gedq/gedq_symbol.h",
+		"line" : "119",
+		"stack_trace" : "\t0x7fae9d9800a7: edt_gedq + 0x1800a7 (_ZN11GEDQ_SYMBOL3addEP12GEDQ_FILE_DB + 0x5d)\n\t0x7fae9d920925: edt_gedq + 0x120925 (_ZN12GEDQ_COMMAND17remove_add_updateEP21GEDQ_GLYPH_COLLECTIONS1_ + 0x1f1)\n\t0x7fae9d9211ff: edt_gedq + 0x1211ff (_ZN19GEDQ_RESIZE_COMMAND7executeEv + 0xb7)\n\t0x7fae9d898e40: edt_gedq + 0x98e40 (_ZN14GEDQ_FRAME_WND15execute_commandEP11UIB_COMMAND + 0x46)\n\t0x7fae9d925136: edt_gedq + 0x125136 (_ZN9GEDQ_VIEW9do_resizeERK5QRectP10GEDQ_GLYPHN17AFCQ_DRAG_TRACKER14RESIZE_HANDLESE + 0x3ce)\n\t0x7fae9d9252e1: edt_gedq + 0x1252e1 (_ZN9GEDQ_VIEW12track_resizeERK6QPointS2_S2_P10GEDQ_GLYPH5QSizeN17AFCQ_DRAG_TRACKER14RESIZE_HANDLESE + 0x15d)\n\t0x7fae9d9263cc: edt_gedq + 0x1263cc (_ZN11GEDQ_SYMBOL5trackEP12GEDQ_FILE_DBP9GEDQ_VIEWRK6QPointS6_S6_ + 0x332)\n\t0x7fae9d91f58b: edt_gedq + 0x11f58b (_ZN19GEDQ_SELECTION_MODE14do_button_downE6QFlagsIN2Qt16KeyboardModifierEERK6QPointb + 0x3c5)\n\t0x7fae9d91f7a1: edt_gedq + 0x11f7a1 (_ZN19GEDQ_SELECTION_MODE16on_l_button_downE6QFlagsIN2Qt16KeyboardModifierEERK6QPoint + 0x81)\n\t0x7fae9d8b84cb: edt_gedq + 0xb84cb (_ZN9GEDQ_VIEW15mousePressEventEP11QMouseEvent + 0x137)\n\t0x7faef5a65f2b: QtGui.so.4 + 0x265f2b (_ZN7QWidget5eventEP6QEvent + 0x46b)\n\t0x7faef5a0484f: QtGui.so.4 + 0x20484f (_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent + 0xaf)\n\t0x7faef5a0b0d3: QtGui.so.4 + 0x20b0d3 (_ZN12QApplication6notifyEP7QObjectP6QEvent + 0x3b3)\n\t0x7faf0e3b5ac4: QtCore.so.4 + 0x1b5ac4 (_ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent + 0x84)\n\t0x7faef5a07ac5: QtGui.so.4 + 0x207ac5 (_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_Eb + 0x135)\n\t0x7faef5a8e92a: QtGui.so.4 + 0x28e92a\n\t0x7faef5a8d62a: QtGui.so.4 + 0x28d62a (_ZN12QApplication15x11ProcessEventEP7_XEvent + 0xe2a)\n\t0x7faef5ab8d62: QtGui.so.4 + 0x2b8d62\n\t0x7faef950887d: glib-2.0.so.0 + 0x5e87d\n\t0x7faef9509cd7: glib-2.0.so.0 + 0x5fcd7\n\t0x7faef9509ee5: glib-2.0.so.0 + 0x5fee5 (g_main_context_iteration + 0x35)\n\t0x7faf0e3e8af5: QtCore.so.4 + 0x1e8af5 (_ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE + 0x65)\n\t0x7faef5ab889f: QtGui.so.4 + 0x2b889f\n\t0x7faf0e3b4ad5: QtCore.so.4 + 0x1b4ad5 (_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE + 0x35)\n\t0x7faf0e3b4ea8: QtCore.so.4 + 0x1b4ea8 (_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE + 0x128)\n\t0x7faf0e3b9cc4: QtCore.so.4 + 0x1b9cc4 (_ZN16QCoreApplication4execEv + 0xb4)\n\t   0x401eab: quartus + 0x1eab (_Z8qgq_mainiPPKc + 0x7b)\n\t0x7faf0374fe30: ccl_msg + 0x3ee30 (_Z15msg_main_threadPv + 0x10)\n\t0x7faefc7a1acc: ccl_thr + 0x5acc (thr_final_wrapper + 0xc)\n\t0x7faf0374feef: ccl_msg + 0x3eeef (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)\n\t0x7faefca4af9c: ccl_mem + 0x9f9c (_Z18mem_thread_wrapperPFPvS_ES_ + 0x5c)\n\t0x7faefc7d8b39: ccl_err + 0x8b39 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)\n\t0x7faefc7a1b0f: ccl_thr + 0x5b0f (thr_thread_wrapper + 0x15)\n\t0x7faf03751ea1: ccl_msg + 0x40ea1 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xb2)\n\t   0x401f91: quartus + 0x1f91 (main + 0x26)\n\t0x7faef0027675: c.so.6 + 0x27675\n\t0x7faef0027729: c.so.6 + 0x27729 (__libc_start_main + 0x89)\n\t   0x401d39: quartus + 0x1d39\n",
+		"subsystem" : "GEDQ"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "20.1.1",
+		"build" : "720",
+		"edition" : "Lite Edition"
+	}
+}
