@@ -20,10 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -42,10 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
-
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -84,7 +76,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("CLEAR")
+SIGNAL("_CLEAR")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -164,16 +156,6 @@ SIGNAL("ENABLE_T")
 	PARENT = "";
 }
 
-SIGNAL("LOAD")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("QA")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -224,11 +206,6 @@ SIGNAL("RCO")
 	PARENT = "";
 }
 
-GROUP("count")
-{
-	MEMBERS = "QA", "QB", "QC", "QD";
-}
-
 SIGNAL("_LOAD")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -239,7 +216,12 @@ SIGNAL("_LOAD")
 	PARENT = "";
 }
 
-TRANSITION_LIST("CLEAR")
+GROUP("count")
+{
+	MEMBERS = "QA", "QB", "QC", "QD";
+}
+
+TRANSITION_LIST("_CLEAR")
 {
 	NODE
 	{
@@ -325,17 +307,6 @@ TRANSITION_LIST("ENABLE_T")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("LOAD")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 390.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 580.0;
 	}
 }
 
@@ -442,7 +413,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "CLEAR";
+	CHANNEL = "_CLEAR";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -478,21 +449,12 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "LOAD";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	CHANNEL = "count";
+	EXPAND_STATUS = EXPANDED;
+	RADIX = Unsigned;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "count";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 10;
-	TREE_LEVEL = 0;
-	CHILDREN = 11, 12, 13, 14;
+	CHILDREN = 10, 11, 12, 13;
 }
 
 DISPLAY_LINE
@@ -500,9 +462,9 @@ DISPLAY_LINE
 	CHANNEL = "QD";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 11;
+	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
-	PARENT = 10;
+	PARENT = 9;
 }
 
 DISPLAY_LINE
@@ -510,9 +472,9 @@ DISPLAY_LINE
 	CHANNEL = "QC";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 12;
+	TREE_INDEX = 11;
 	TREE_LEVEL = 1;
-	PARENT = 10;
+	PARENT = 9;
 }
 
 DISPLAY_LINE
@@ -520,9 +482,9 @@ DISPLAY_LINE
 	CHANNEL = "QB";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 13;
+	TREE_INDEX = 12;
 	TREE_LEVEL = 1;
-	PARENT = 10;
+	PARENT = 9;
 }
 
 DISPLAY_LINE
@@ -530,9 +492,9 @@ DISPLAY_LINE
 	CHANNEL = "QA";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 14;
+	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
-	PARENT = 10;
+	PARENT = 9;
 }
 
 DISPLAY_LINE
@@ -540,7 +502,7 @@ DISPLAY_LINE
 	CHANNEL = "RCO";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 15;
+	TREE_INDEX = 14;
 	TREE_LEVEL = 0;
 }
 

@@ -136,7 +136,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 48 712 216 728)
 	(text "INPUT" (rect 125 0 158 11)(font "Arial" (font_size 6)))
-	(text "_LOAD" (rect 5 0 46 15)(font "Intel Clear" ))
+	(text "_LOAD" (rect 5 0 45 15)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -152,7 +152,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 48 504 216 520)
 	(text "INPUT" (rect 125 0 158 11)(font "Arial" (font_size 6)))
-	(text "_CLEAR" (rect 5 0 50 15)(font "Intel Clear" ))
+	(text "_CLEAR" (rect 5 0 49 15)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
