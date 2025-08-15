@@ -1,0 +1,107 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 280 256)
+	(text "FEC" (rect 5 0 30 17)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 1 175 22 190)(font "Intel Clear" ))
+	(port
+		(pt 0 128)
+		(input)
+		(text "_CLOCK" (rect 0 0 53 17)(font "Intel Clear" (font_size 8)))
+		(text "_CLOCK" (rect 21 115 74 132)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "_CYCLE_RST" (rect 24 48 108 65)(font "Intel Clear" (font_size 8)))
+		(text "_CYCLE_RST" (rect 24 152 108 169)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 216 24)
+		(output)
+		(text "_T0" (rect 0 0 24 17)(font "Intel Clear" (font_size 8)))
+		(text "_T0" (rect 168 16 192 33)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 24)(pt 200 24))
+	)
+	(port
+		(pt 216 40)
+		(output)
+		(text "_T1" (rect 0 0 24 17)(font "Intel Clear" (font_size 8)))
+		(text "_T1" (rect 168 32 192 49)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 40)(pt 200 40))
+	)
+	(port
+		(pt 216 56)
+		(output)
+		(text "_T2" (rect 0 0 24 17)(font "Intel Clear" (font_size 8)))
+		(text "_T2" (rect 168 48 192 65)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 56)(pt 200 56))
+	)
+	(port
+		(pt 216 72)
+		(output)
+		(text "_T3" (rect 0 0 24 17)(font "Intel Clear" (font_size 8)))
+		(text "_T3" (rect 168 64 192 81)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 72)(pt 200 72))
+	)
+	(port
+		(pt 216 88)
+		(output)
+		(text "_T4" (rect 0 0 24 17)(font "Intel Clear" (font_size 8)))
+		(text "_T4" (rect 168 80 192 97)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 88)(pt 200 88))
+	)
+	(port
+		(pt 216 104)
+		(output)
+		(text "_cycle_end" (rect 0 0 73 17)(font "Intel Clear" (font_size 8)))
+		(text "_cycle_end" (rect 128 96 201 113)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 104)(pt 200 104))
+	)
+	(port
+		(pt 216 128)
+		(output)
+		(text "FEC_OUT_0" (rect 0 0 79 17)(font "Intel Clear" (font_size 8)))
+		(text "FEC_OUT_0" (rect 128 120 207 137)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 128)(pt 200 128))
+	)
+	(port
+		(pt 216 144)
+		(output)
+		(text "FEC_OUT_1" (rect 0 0 79 17)(font "Intel Clear" (font_size 8)))
+		(text "FEC_OUT_1" (rect 128 136 207 153)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 144)(pt 200 144))
+	)
+	(port
+		(pt 216 160)
+		(output)
+		(text "FEC_OUT_2" (rect 0 0 79 17)(font "Intel Clear" (font_size 8)))
+		(text "FEC_OUT_2" (rect 128 152 207 169)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 160)(pt 200 160))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 176))
+	)
+)
