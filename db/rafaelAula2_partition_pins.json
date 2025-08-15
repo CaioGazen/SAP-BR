@@ -4,7 +4,67 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HLT",
+					"name" : "BUS_0",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_1",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_2",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_3",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_4",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_5",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_6",
+					"strict" : false
+				},
+				{
+					"name" : "BUS_7",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_0",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_1",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_2",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_3",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_4",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_5",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_6",
+					"strict" : false
+				},
+				{
+					"name" : "OR_OUT_7",
 					"strict" : false
 				},
 				{
@@ -76,31 +136,171 @@
 					"strict" : false
 				},
 				{
-					"name" : "IN_0",
+					"name" : "IR_0",
 					"strict" : false
 				},
 				{
-					"name" : "IN_1",
+					"name" : "IR_1",
 					"strict" : false
 				},
 				{
-					"name" : "IN_2",
+					"name" : "IR_2",
 					"strict" : false
 				},
 				{
-					"name" : "IN_6",
+					"name" : "IR_3",
 					"strict" : false
 				},
 				{
-					"name" : "IN_5",
+					"name" : "MAR_ADDR_0",
 					"strict" : false
 				},
 				{
-					"name" : "IN_4",
+					"name" : "MAR_ADDR_1",
 					"strict" : false
 				},
 				{
-					"name" : "IN_3",
+					"name" : "MAR_ADDR_2",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_ADDR_3",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_0",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_1",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_2",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_3",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_4",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_5",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_6",
+					"strict" : false
+				},
+				{
+					"name" : "B_OUT_7",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_0",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_1",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_2",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_3",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_4",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_5",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_6",
+					"strict" : false
+				},
+				{
+					"name" : "A_OUT_7",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_ADDR_PROG_0",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_ADDR_PROG",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_ADDR_PROG_1",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_ADDR_PROG_2",
+					"strict" : false
+				},
+				{
+					"name" : "MAR_ADDR_PROG_3",
+					"strict" : false
+				},
+				{
+					"name" : "WR_PROG",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG",
+					"strict" : false
+				},
+				{
+					"name" : "BTN_RST",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "HLT",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_0",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_1",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_2",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_3",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_4",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_5",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_6",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_PROG_7",
 					"strict" : false
 				}
 			]

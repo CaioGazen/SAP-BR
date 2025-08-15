@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rafaelAula2
-Tue Aug 12 23:30:29 2025
+Fri Aug 15 02:23:15 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug 12 23:30:29 2025       ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 15 02:23:15 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; rafaelAula2                                 ;
-; Top-level Entity Name              ; EEPROM_53x18_FULL                           ;
+; Top-level Entity Name              ; SAP_BR                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 43                                          ;
-;     Total combinational functions  ; 43                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 25                                          ;
+; Total logic elements               ; 601                                         ;
+;     Total combinational functions  ; 453                                         ;
+;     Dedicated logic registers      ; 171                                         ;
+; Total registers                    ; 171                                         ;
+; Total pins                         ; 75                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; EEPROM_53x18_FULL  ; rafaelAula2        ;
+; Top-level entity name                                            ; SAP_BR             ; rafaelAula2        ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -158,83 +158,271 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+---------+
-; DEMUX/DEMUX_4bits.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DEMUX/DEMUX_4bits.bdf        ;         ;
-; EEPROM/EEPROM_53x18_FULL.bdf     ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/EEPROM/EEPROM_53x18_FULL.bdf ;         ;
-; DM74LS138/DM74LS138.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DM74LS138/DM74LS138.bdf      ;         ;
-; EEPROM/EEPROM_1bit.bdf           ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/EEPROM/EEPROM_1bit.bdf       ;         ;
-; DEMUX/DEMUX_3bits_3.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DEMUX/DEMUX_3bits_3.bdf      ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
+; OR/O_R.bdf                       ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/OR/O_R.bdf                      ;         ;
+; SAP_BR.bdf                       ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/SAP_BR.bdf                      ;         ;
+; ULA/Seletor4Canais.bdf           ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/ULA/Seletor4Canais.bdf          ;         ;
+; ULA/Somador_Completo_74_283.bdf  ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/ULA/Somador_Completo_74_283.bdf ;         ;
+; ULA/Buffers_TriState_8.bdf       ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/ULA/Buffers_TriState_8.bdf      ;         ;
+; ULA/ULA_Iago.bdf                 ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/ULA/ULA_Iago.bdf                ;         ;
+; DEMUX/DEMUX_4bits.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DEMUX/DEMUX_4bits.bdf           ;         ;
+; EEPROM/EEPROM_53x18_FULL.bdf     ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/EEPROM/EEPROM_53x18_FULL.bdf    ;         ;
+; Mux/MuxDuplode8bits.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/Mux/MuxDuplode8bits.bdf         ;         ;
+; Mux/MuxDuplode4bits.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/Mux/MuxDuplode4bits.bdf         ;         ;
+; DM74LS138/DM74LS138.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DM74LS138/DM74LS138.bdf         ;         ;
+; SN74LS173/SN74LS173.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/SN74LS173/SN74LS173.bdf         ;         ;
+; RAM/RAM.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/RAM/RAM.bdf                     ;         ;
+; RAM/Cell_1_bit.bdf               ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/RAM/Cell_1_bit.bdf              ;         ;
+; RAM/Cell_8x8_bits.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/RAM/Cell_8x8_bits.bdf           ;         ;
+; RAM/AND_8x8.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/RAM/AND_8x8.bdf                 ;         ;
+; DM74LS161A/DM74LS161A.bdf        ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DM74LS161A/DM74LS161A.bdf       ;         ;
+; PC/PC.bdf                        ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/PC/PC.bdf                       ;         ;
+; ACC/ACC.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/ACC/ACC.bdf                     ;         ;
+; BR/BR.bdf                        ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/BR/BR.bdf                       ;         ;
+; IR/IR.bdf                        ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/IR/IR.bdf                       ;         ;
+; MAR/MAR.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/MAR/MAR.bdf                     ;         ;
+; EEPROM/EEPROM_1bit.bdf           ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/EEPROM/EEPROM_1bit.bdf          ;         ;
+; DEMUX/DEMUX_3bits_3.bdf          ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/DEMUX/DEMUX_3bits_3.bdf         ;         ;
+; CTRL/CTRL.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/CTRL/CTRL.bdf                   ;         ;
+; CTRL/FEC.bdf                     ; yes             ; User Block Diagram/Schematic File  ; /home/civ/SAP-BR/CTRL/FEC.bdf                    ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 43         ;
-;                                             ;            ;
-; Total combinational functions               ; 43         ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 37         ;
-;     -- 3 input functions                    ; 6          ;
-;     -- <=2 input functions                  ; 0          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 43         ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 25         ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; IN_6~input ;
-; Maximum fan-out                             ; 21         ;
-; Total fan-out                               ; 209        ;
-; Average fan-out                             ; 2.25       ;
-+---------------------------------------------+------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 601                 ;
+;                                             ;                     ;
+; Total combinational functions               ; 453                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 369                 ;
+;     -- 3 input functions                    ; 64                  ;
+;     -- <=2 input functions                  ; 20                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 453                 ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers                             ; 171                 ;
+;     -- Dedicated logic registers            ; 171                 ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 75                  ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; RAM:inst12|inste~22 ;
+; Maximum fan-out                             ; 128                 ;
+; Total fan-out                               ; 2279                ;
+; Average fan-out                             ; 2.94                ;
++---------------------------------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name       ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+-------------------+--------------+
-; |EEPROM_53x18_FULL         ; 43 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |EEPROM_53x18_FULL                                     ; EEPROM_53x18_FULL ; work         ;
-;    |DEMUX_3bits_3:inst513| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|DEMUX_3bits_3:inst513               ; DEMUX_3bits_3     ; work         ;
-;    |DEMUX_4bits:inst547|   ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|DEMUX_4bits:inst547                 ; DEMUX_4bits       ; work         ;
-;       |DM74LS138:inst4|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|DEMUX_4bits:inst547|DM74LS138:inst4 ; DM74LS138         ; work         ;
-;    |EEPROM_1bit:inst13|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst13                  ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst16|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst16                  ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst18|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst18                  ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst1|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst1                   ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst2|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst2                   ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst306|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst306                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst343|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst343                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst345|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst345                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst35b3|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst35b3                ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst381|   ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst381                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst3|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst3                   ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst410|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst410                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst418|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst418                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst420|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst420                 ; EEPROM_1bit       ; work         ;
-;    |EEPROM_1bit:inst6|     ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |EEPROM_53x18_FULL|EEPROM_1bit:inst6                   ; EEPROM_1bit       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+-------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                            ; Entity Name             ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+-------------------------+--------------+
+; |SAP_BR                               ; 453 (0)             ; 171 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |SAP_BR                                                                        ; SAP_BR                  ; work         ;
+;    |ACC:inst5|                        ; 2 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ACC:inst5                                                              ; ACC                     ; work         ;
+;       |Buffers_TriState_8:inst4|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ACC:inst5|Buffers_TriState_8:inst4                                     ; Buffers_TriState_8      ; work         ;
+;       |SN74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ACC:inst5|SN74LS173:inst1                                              ; SN74LS173               ; work         ;
+;       |SN74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ACC:inst5|SN74LS173:inst                                               ; SN74LS173               ; work         ;
+;    |BR:inst8|                         ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|BR:inst8                                                               ; BR                      ; work         ;
+;       |SN74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|BR:inst8|SN74LS173:inst1                                               ; SN74LS173               ; work         ;
+;       |SN74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|BR:inst8|SN74LS173:inst                                                ; SN74LS173               ; work         ;
+;    |CTRL:inst4|                       ; 82 (1)              ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4                                                             ; CTRL                    ; work         ;
+;       |EEPROM_53x18_FULL:inst4|       ; 78 (1)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4                                     ; EEPROM_53x18_FULL       ; work         ;
+;          |DEMUX_3bits_3:inst184|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_3bits_3:inst184               ; DEMUX_3bits_3           ; work         ;
+;          |DEMUX_3bits_3:inst293|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_3bits_3:inst293               ; DEMUX_3bits_3           ; work         ;
+;          |DEMUX_3bits_3:inst45|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_3bits_3:inst45                ; DEMUX_3bits_3           ; work         ;
+;          |DEMUX_3bits_3:inst513|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_3bits_3:inst513               ; DEMUX_3bits_3           ; work         ;
+;          |DEMUX_3bits_3:inst|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_3bits_3:inst                  ; DEMUX_3bits_3           ; work         ;
+;          |DEMUX_4bits:inst547|        ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547                 ; DEMUX_4bits             ; work         ;
+;             |DM74LS138:inst4|         ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547|DM74LS138:inst4 ; DM74LS138               ; work         ;
+;          |EEPROM_1bit:inst1695|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1695                ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst1726|       ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1726                ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst1728|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1728                ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst1767|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1767                ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst1840|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1840                ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst35b8|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst35b8                ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst408|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst408                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst410|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst410                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst418|        ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst418                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst445|        ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst445                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst455|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst455                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst458|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst458                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst460|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst460                 ; EEPROM_1bit             ; work         ;
+;          |EEPROM_1bit:inst840|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst840                 ; EEPROM_1bit             ; work         ;
+;       |FEC:inst|                      ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|FEC:inst                                                    ; FEC                     ; work         ;
+;          |DM74LS161A:inst|            ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|CTRL:inst4|FEC:inst|DM74LS161A:inst                                    ; DM74LS161A              ; work         ;
+;    |IR:inst3|                         ; 20 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|IR:inst3                                                               ; IR                      ; work         ;
+;       |SN74LS173:inst1|               ; 20 (20)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|IR:inst3|SN74LS173:inst1                                               ; SN74LS173               ; work         ;
+;       |SN74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|IR:inst3|SN74LS173:inst                                                ; SN74LS173               ; work         ;
+;    |MAR:inst1|                        ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|MAR:inst1                                                              ; MAR                     ; work         ;
+;       |MuxDuplode4bits:inst|          ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|MAR:inst1|MuxDuplode4bits:inst                                         ; MuxDuplode4bits         ; work         ;
+;       |SN74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|MAR:inst1|SN74LS173:inst1                                              ; SN74LS173               ; work         ;
+;    |O_R:inst24|                       ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|O_R:inst24                                                             ; O_R                     ; work         ;
+;       |SN74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|O_R:inst24|SN74LS173:inst1                                             ; SN74LS173               ; work         ;
+;       |SN74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|O_R:inst24|SN74LS173:inst                                              ; SN74LS173               ; work         ;
+;    |PC:inst|                          ; 10 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|PC:inst                                                                ; PC                      ; work         ;
+;       |DM74LS161A:inst|               ; 10 (10)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|PC:inst|DM74LS161A:inst                                                ; DM74LS161A              ; work         ;
+;    |RAM:inst12|                       ; 269 (6)             ; 128 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12                                                             ; RAM                     ; work         ;
+;       |Buffers_TriState_8:inst4|      ; 52 (52)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Buffers_TriState_8:inst4                                    ; Buffers_TriState_8      ; work         ;
+;       |Cell_8x8_bits:inst2|           ; 81 (0)              ; 64 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2                                         ; Cell_8x8_bits           ; work         ;
+;          |Cell_1_bit:inst10|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst10                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst11|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst11                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst12|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst12                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst13|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst13                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst14|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst14                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst15|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst15                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst16|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst16                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst17|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst17                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst18|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst18                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst19|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst19                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst1|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst1                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst20|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst20                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst21|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst21                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst22|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst22                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst23|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst23                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst24|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst24                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst25|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst25                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst26|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst26                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst27|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst27                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst28|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst28                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst29|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst29                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst2|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst2                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst30|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst30                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst31|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst31                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst32|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst32                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst33|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst33                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst34|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst34                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst35|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst35                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst36|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst36                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst37|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst37                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst38|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst38                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst39|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst39                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst3|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst3                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst40|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst40                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst41|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst41                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst42|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst42                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst43|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst43                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst44|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst44                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst45|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst45                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst46|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst46                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst47|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst47                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst48|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst48                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst49|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst49                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst4|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst4                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst50|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst50                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst51|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst51                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst52|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst52                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst53|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst53                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst54|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst54                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst55|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst55                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst56|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst56                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst57|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst57                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst58|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst58                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst59|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst59                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst5|           ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst5                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst60|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst60                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst61|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst61                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst62|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst62                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst63|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst63                       ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst6|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst6                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst7|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst7                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst8|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst8                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst9|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst9                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst|            ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst2|Cell_1_bit:inst                         ; Cell_1_bit              ; work         ;
+;       |Cell_8x8_bits:inst|            ; 122 (0)             ; 64 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst                                          ; Cell_8x8_bits           ; work         ;
+;          |Cell_1_bit:inst10|          ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst10                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst11|          ; 11 (11)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst11                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst12|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst12                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst13|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst13                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst14|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst14                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst15|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst15                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst16|          ; 11 (11)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst16                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst17|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst17                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst18|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst18                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst19|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst19                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst1|           ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst1                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst20|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst20                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst21|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst21                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst22|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst22                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst23|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst23                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst24|          ; 11 (11)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst24                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst25|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst25                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst26|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst26                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst27|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst27                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst28|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst28                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst29|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst29                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst2|           ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst2                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst30|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst30                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst31|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst31                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst32|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst32                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst33|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst33                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst34|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst34                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst35|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst35                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst36|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst36                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst37|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst37                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst38|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst38                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst39|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst39                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst3|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst3                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst40|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst40                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst41|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst41                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst42|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst42                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst43|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst43                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst44|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst44                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst45|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst45                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst46|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst46                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst47|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst47                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst48|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst48                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst49|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst49                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst4|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst4                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst50|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst50                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst51|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst51                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst52|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst52                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst53|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst53                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst54|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst54                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst55|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst55                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst56|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst56                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst57|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst57                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst58|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst58                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst59|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst59                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst5|           ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst5                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst60|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst60                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst61|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst61                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst62|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst62                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst63|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst63                        ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst6|           ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst6                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst7|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst7                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst8|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst8                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst9|           ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst9                         ; Cell_1_bit              ; work         ;
+;          |Cell_1_bit:inst|            ; 17 (17)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst                          ; Cell_1_bit              ; work         ;
+;       |MuxDuplode8bits:inst7|         ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|RAM:inst12|MuxDuplode8bits:inst7                                       ; MuxDuplode8bits         ; work         ;
+;    |ULA_Iago:inst7|                   ; 66 (3)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7                                                         ; ULA_Iago                ; work         ;
+;       |Buffers_TriState_8:inst62|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7|Buffers_TriState_8:inst62                               ; Buffers_TriState_8      ; work         ;
+;       |Buffers_TriState_8:inst63|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7|Buffers_TriState_8:inst63                               ; Buffers_TriState_8      ; work         ;
+;       |Buffers_TriState_8:inst65|     ; 28 (28)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7|Buffers_TriState_8:inst65                               ; Buffers_TriState_8      ; work         ;
+;       |Seletor4Canais:inst55|         ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7|Seletor4Canais:inst55                                   ; Seletor4Canais          ; work         ;
+;       |Somador_Completo_74_283:inst3| ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7|Somador_Completo_74_283:inst3                           ; Somador_Completo_74_283 ; work         ;
+;       |Somador_Completo_74_283:inst|  ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP_BR|ULA_Iago:inst7|Somador_Completo_74_283:inst                            ; Somador_Completo_74_283 ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -243,12 +431,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 171   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 36    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 36    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -258,15 +446,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
-; cycloneiii_io_obuf    ; 18                          ;
-; cycloneiii_lcell_comb ; 43                          ;
-;     normal            ; 43                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 37                          ;
+; boundary_port         ; 75                          ;
+; cycloneiii_ff         ; 171                         ;
+;     ENA CLR           ; 36                          ;
+;     plain             ; 135                         ;
+; cycloneiii_io_obuf    ; 25                          ;
+; cycloneiii_lcell_comb ; 453                         ;
+;     normal            ; 453                         ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 64                          ;
+;         4 data inputs ; 369                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.16                        ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 8.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -275,7 +467,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -285,9 +477,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Aug 12 23:30:24 2025
+    Info: Processing started: Fri Aug 15 02:23:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rafaelAula2 -c rafaelAula2
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file OR/O_R.bdf
+    Info (12023): Found entity 1: O_R
+Info (12021): Found 1 design units, including 1 entities, in source file SAP_BR.bdf
+    Info (12023): Found entity 1: SAP_BR
+Info (12021): Found 1 design units, including 1 entities, in source file ULA/Seletor4Canais.bdf
+    Info (12023): Found entity 1: Seletor4Canais
+Info (12021): Found 1 design units, including 1 entities, in source file ULA/Somador_Completo_74_283.bdf
+    Info (12023): Found entity 1: Somador_Completo_74_283
+Info (12021): Found 1 design units, including 1 entities, in source file ULA/Buffers_TriState_8.bdf
+    Info (12023): Found entity 1: Buffers_TriState_8
+Info (12021): Found 1 design units, including 1 entities, in source file ULA/ULA_Iago.bdf
+    Info (12023): Found entity 1: ULA_Iago
 Info (12021): Found 1 design units, including 1 entities, in source file DEMUX/DEMUX_4bits.bdf
     Info (12023): Found entity 1: DEMUX_4bits
 Info (12021): Found 1 design units, including 1 entities, in source file EEPROM/EEPROM_53x18_FULL.bdf
@@ -326,30 +530,160 @@ Info (12021): Found 1 design units, including 1 entities, in source file IR/IR.b
     Info (12023): Found entity 1: IR
 Info (12021): Found 1 design units, including 1 entities, in source file MAR/MAR.bdf
     Info (12023): Found entity 1: MAR
-Warning (12018): Entity "OR" will be ignored because it conflicts with Quartus Prime primitive name
-Info (12021): Found 1 design units, including 1 entities, in source file OR/OR.bdf
 Info (12021): Found 1 design units, including 1 entities, in source file EEPROM/EEPROM_1bit.bdf
     Info (12023): Found entity 1: EEPROM_1bit
 Info (12021): Found 1 design units, including 1 entities, in source file EEPROM/EEPROM_53x18_EMPTY.bdf
     Info (12023): Found entity 1: EEPROM_53x18_EMPTY
 Info (12021): Found 1 design units, including 1 entities, in source file DEMUX/DEMUX_3bits_3.bdf
     Info (12023): Found entity 1: DEMUX_3bits_3
-Info (12127): Elaborating entity "EEPROM_53x18_FULL" for the top level hierarchy
-Info (12128): Elaborating entity "EEPROM_1bit" for hierarchy "EEPROM_1bit:inst1"
-Info (12128): Elaborating entity "DEMUX_3bits_3" for hierarchy "DEMUX_3bits_3:inst"
-Info (12128): Elaborating entity "DEMUX_4bits" for hierarchy "DEMUX_4bits:inst547"
-Info (12128): Elaborating entity "DM74LS138" for hierarchy "DEMUX_4bits:inst547|DM74LS138:inst4"
+Info (12021): Found 1 design units, including 1 entities, in source file CTRL/CTRL.bdf
+    Info (12023): Found entity 1: CTRL
+Info (12021): Found 1 design units, including 1 entities, in source file CTRL/FEC.bdf
+    Info (12023): Found entity 1: FEC
+Warning (12019): Can't analyze file -- file CTRL/SAP_BR.bdf is missing
+Info (12127): Elaborating entity "SAP_BR" for the top level hierarchy
+Info (12128): Elaborating entity "IR" for hierarchy "IR:inst3"
+Info (12128): Elaborating entity "SN74LS173" for hierarchy "IR:inst3|SN74LS173:inst"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:inst12"
+Info (12128): Elaborating entity "Buffers_TriState_8" for hierarchy "RAM:inst12|Buffers_TriState_8:inst4"
+Info (12128): Elaborating entity "Cell_8x8_bits" for hierarchy "RAM:inst12|Cell_8x8_bits:inst"
+Info (12128): Elaborating entity "Cell_1_bit" for hierarchy "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst"
+Info (12128): Elaborating entity "MuxDuplode8bits" for hierarchy "RAM:inst12|MuxDuplode8bits:inst7"
+Info (12128): Elaborating entity "AND_8x8" for hierarchy "RAM:inst12|AND_8x8:inst8"
+Info (12128): Elaborating entity "DM74LS138" for hierarchy "RAM:inst12|DM74LS138:inst1"
+Info (12128): Elaborating entity "ULA_Iago" for hierarchy "ULA_Iago:inst7"
+Warning (275011): Block or symbol "AND2" of instance "inst4" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst11" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst30" overlaps another block or symbol
+Info (12128): Elaborating entity "Seletor4Canais" for hierarchy "ULA_Iago:inst7|Seletor4Canais:inst55"
+Info (12128): Elaborating entity "Somador_Completo_74_283" for hierarchy "ULA_Iago:inst7|Somador_Completo_74_283:inst"
+Info (12128): Elaborating entity "CTRL" for hierarchy "CTRL:inst4"
+Info (12128): Elaborating entity "EEPROM_53x18_FULL" for hierarchy "CTRL:inst4|EEPROM_53x18_FULL:inst4"
+Info (12128): Elaborating entity "EEPROM_1bit" for hierarchy "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1"
+Info (12128): Elaborating entity "DEMUX_3bits_3" for hierarchy "CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_3bits_3:inst"
+Info (12128): Elaborating entity "DEMUX_4bits" for hierarchy "CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547"
+Info (12128): Elaborating entity "FEC" for hierarchy "CTRL:inst4|FEC:inst"
+Info (12128): Elaborating entity "DM74LS161A" for hierarchy "CTRL:inst4|FEC:inst|DM74LS161A:inst"
+Info (12128): Elaborating entity "ACC" for hierarchy "ACC:inst5"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:inst"
+Info (12128): Elaborating entity "BR" for hierarchy "BR:inst8"
+Info (12128): Elaborating entity "MAR" for hierarchy "MAR:inst1"
+Info (12128): Elaborating entity "MuxDuplode4bits" for hierarchy "MAR:inst1|MuxDuplode4bits:inst"
+Info (12128): Elaborating entity "O_R" for hierarchy "O_R:inst24"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "MAR:inst1|SN74LS173:inst1|inst8" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:inst1|SN74LS173:inst1|inst14" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:inst1|SN74LS173:inst1|inst21" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "MAR:inst1|SN74LS173:inst1|inst27" feeding internal logic into a wire
+    Warning (13048): Converted tri-state node "CTRL:inst4|EEPROM_53x18_FULL:inst4|HLT" into a selector
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer MAR:inst1|MuxDuplode4bits:inst|inst13~0
+    Warning (19017): Found clock multiplexer MAR:inst1|MuxDuplode4bits:inst|inst21~0
+    Warning (19017): Found clock multiplexer MAR:inst1|MuxDuplode4bits:inst|inst18~0
+    Warning (19017): Found clock multiplexer MAR:inst1|MuxDuplode4bits:inst|inst24~0
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst1|inst27" to the node "OR_OUT_0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst1|inst21" to the node "OR_OUT_1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst1|inst14" to the node "OR_OUT_2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst1|inst8" to the node "OR_OUT_3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst|inst27" to the node "OR_OUT_4" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst|inst21" to the node "OR_OUT_5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst|inst14" to the node "OR_OUT_6" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "O_R:inst24|SN74LS173:inst|inst8" to the node "OR_OUT_7" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "IR:inst3|SN74LS173:inst|inst27" to the node "IR_0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "IR:inst3|SN74LS173:inst|inst21" to the node "IR_1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "IR:inst3|SN74LS173:inst|inst14" to the node "IR_2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "IR:inst3|SN74LS173:inst|inst8" to the node "IR_3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst1|inst27" to the node "B_OUT_0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst1|inst21" to the node "B_OUT_1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst1|inst14" to the node "B_OUT_2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst1|inst8" to the node "B_OUT_3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst|inst27" to the node "B_OUT_4" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst|inst21" to the node "B_OUT_5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst|inst14" to the node "B_OUT_6" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "BR:inst8|SN74LS173:inst|inst8" to the node "B_OUT_7" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst1|inst27" to the node "A_OUT_0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst1|inst21" to the node "A_OUT_1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst1|inst14" to the node "A_OUT_2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst1|inst8" to the node "A_OUT_3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst|inst27" to the node "A_OUT_4" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst|inst21" to the node "A_OUT_5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst|inst14" to the node "A_OUT_6" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "ACC:inst5|SN74LS173:inst|inst8" to the node "A_OUT_7" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst|inst27" to the node "CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547|DM74LS138:inst4|inst8" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst|inst21" to the node "CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547|DM74LS138:inst4|inst8" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst|inst14" to the node "CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547|DM74LS138:inst4|inst8" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst|inst8" to the node "CTRL:inst4|EEPROM_53x18_FULL:inst4|DEMUX_4bits:inst547|DM74LS138:inst4|inst8" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst1|inst27" to the node "ULA_Iago:inst7|inst25" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst1|inst21" to the node "ULA_Iago:inst7|inst26" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst1|inst14" to the node "ULA_Iago:inst7|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst1|inst8" to the node "ULA_Iago:inst7|inst28" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst|inst27" to the node "ULA_Iago:inst7|inst29" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst|inst21" to the node "ULA_Iago:inst7|inst30" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst|inst14" to the node "ULA_Iago:inst7|inst31" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "BR:inst8|SN74LS173:inst|inst8" to the node "ULA_Iago:inst7|inst32" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst1|inst27" to the node "ULA_Iago:inst7|inst25" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst1|inst21" to the node "ULA_Iago:inst7|inst26" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst1|inst14" to the node "ULA_Iago:inst7|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst1|inst8" to the node "ULA_Iago:inst7|inst28" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst|inst27" to the node "ULA_Iago:inst7|inst29" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst|inst21" to the node "ULA_Iago:inst7|inst30" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst|inst14" to the node "ULA_Iago:inst7|inst31" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ACC:inst5|SN74LS173:inst|inst8" to the node "ULA_Iago:inst7|inst32" into an OR gate
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst7" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst11|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst6" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst6" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst6" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst16|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst5" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst24|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst4" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst4" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst4" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst33|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst3" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst3" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst3" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst40|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst2" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst2" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst2" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst48|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst1" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Cell_8x8_bits:inst|Cell_1_bit:inst56|inst10" to the node "RAM:inst12|Buffers_TriState_8:inst4|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ULA_Iago:inst7|Buffers_TriState_8:inst59|inst" to the node "ULA_Iago:inst7|Buffers_TriState_8:inst65|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst1|inst27" to the node "MAR:inst1|SN74LS173:inst1|inst26" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst1|inst21" to the node "MAR:inst1|SN74LS173:inst1|inst20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst1|inst14" to the node "MAR:inst1|SN74LS173:inst1|inst15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "IR:inst3|SN74LS173:inst1|inst8" to the node "MAR:inst1|SN74LS173:inst1|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Buffers_TriState_8:inst4|inst3" to the node "O_R:inst24|SN74LS173:inst|inst26" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Buffers_TriState_8:inst4|inst2" to the node "O_R:inst24|SN74LS173:inst|inst20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Buffers_TriState_8:inst4|inst1" to the node "O_R:inst24|SN74LS173:inst|inst15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "RAM:inst12|Buffers_TriState_8:inst4|inst" to the node "O_R:inst24|SN74LS173:inst|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst408|inst10" to the node "PC:inst|DM74LS161A:inst|inst161" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst445|inst10" to the node "PC:inst|DM74LS161A:inst|inst48" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst410|inst10" to the node "IR:inst3|SN74LS173:inst1|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1726|inst10" to the node "MAR:inst1|SN74LS173:inst1|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst840|inst10" to the node "RAM:inst12|insta" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1728|inst10" to the node "IR:inst3|SN74LS173:inst1|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst414|inst10" to the node "IR:inst3|SN74LS173:inst|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1695|inst10" to the node "IR:inst3|SN74LS173:inst1|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1268|inst10" to the node "IR:inst3|SN74LS173:inst1|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1767|inst10" to the node "ACC:inst5|SN74LS173:inst|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst418|inst10" to the node "ULA_Iago:inst7|inst_xor2" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst455|inst10" to the node "ULA_Iago:inst7|Seletor4Canais:inst55|inst2" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1840|inst10" to the node "ULA_Iago:inst7|Seletor4Canais:inst55|inst2" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst1273|inst10" to the node "IR:inst3|SN74LS173:inst1|inst27" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst458|inst10" to the node "ULA_Iago:inst7|MuxDuplode8bits:inst24|inst24" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst35b8|inst10" to the node "BR:inst8|SN74LS173:inst|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CTRL:inst4|EEPROM_53x18_FULL:inst4|EEPROM_1bit:inst460|inst10" to the node "O_R:inst24|SN74LS173:inst|inst" into an OR gate
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 426 megabytes
-    Info: Processing ended: Tue Aug 12 23:30:29 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:12
+Info (21057): Implemented 692 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 617 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 477 megabytes
+    Info: Processing ended: Fri Aug 15 02:23:15 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:13
 
 

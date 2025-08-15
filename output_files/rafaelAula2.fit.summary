@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Aug 12 23:30:34 2025
+Fitter Status : Successful - Fri Aug 15 02:23:31 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : rafaelAula2
-Top-level Entity Name : EEPROM_53x18_FULL
+Top-level Entity Name : SAP_BR
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 44 / 49,760 ( < 1 % )
-    Total combinational functions : 44 / 49,760 ( < 1 % )
-    Dedicated logic registers : 0 / 49,760 ( 0 % )
-Total registers : 0
-Total pins : 25 / 360 ( 7 % )
+Total logic elements : 545 / 49,760 ( 1 % )
+    Total combinational functions : 454 / 49,760 ( < 1 % )
+    Dedicated logic registers : 171 / 49,760 ( < 1 % )
+Total registers : 171
+Total pins : 75 / 360 ( 21 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

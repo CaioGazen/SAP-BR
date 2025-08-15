@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/10/2025 16:13:14"
+// Generated on "08/14/2025 23:31:32"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          RAM
 // 
@@ -30,9 +30,11 @@
 module RAM_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg _RAM_PROG;
 reg A;
 reg B;
 reg C;
+reg CLOCK;
 reg CS;
 reg D;
 reg IN_0;
@@ -43,7 +45,16 @@ reg IN_4;
 reg IN_5;
 reg IN_6;
 reg IN_7;
-reg WE;
+reg RAM_IN;
+reg RAM_PROG_DATA_0;
+reg RAM_PROG_DATA_1;
+reg RAM_PROG_DATA_2;
+reg RAM_PROG_DATA_3;
+reg RAM_PROG_DATA_4;
+reg RAM_PROG_DATA_5;
+reg RAM_PROG_DATA_6;
+reg RAM_PROG_DATA_7;
+reg WR_PROG;
 // wires                                               
 wire O_0;
 wire O_1;
@@ -57,9 +68,11 @@ wire O_7;
 // assign statements (if any)                          
 RAM i1 (
 // port map - connection between master ports and signals/registers   
+	._RAM_PROG(_RAM_PROG),
 	.A(A),
 	.B(B),
 	.C(C),
+	.CLOCK(CLOCK),
 	.CS(CS),
 	.D(D),
 	.IN_0(IN_0),
@@ -78,32 +91,40 @@ RAM i1 (
 	.O_5(O_5),
 	.O_6(O_6),
 	.O_7(O_7),
-	.WE(WE)
+	.RAM_IN(RAM_IN),
+	.RAM_PROG_DATA_0(RAM_PROG_DATA_0),
+	.RAM_PROG_DATA_1(RAM_PROG_DATA_1),
+	.RAM_PROG_DATA_2(RAM_PROG_DATA_2),
+	.RAM_PROG_DATA_3(RAM_PROG_DATA_3),
+	.RAM_PROG_DATA_4(RAM_PROG_DATA_4),
+	.RAM_PROG_DATA_5(RAM_PROG_DATA_5),
+	.RAM_PROG_DATA_6(RAM_PROG_DATA_6),
+	.RAM_PROG_DATA_7(RAM_PROG_DATA_7),
+	.WR_PROG(WR_PROG)
 );
 initial 
 begin 
 #1000000 $stop;
 end 
 
+// RAM_IN
+initial
+begin
+	RAM_IN = 1'b0;
+end 
+
+// CLOCK
+initial
+begin
+	CLOCK = 1'b0;
+end 
+
 // CS
 initial
 begin
-	CS = 1'b1;
-	CS = #840000 1'b0;
-end 
-
-// WE
-initial
-begin
-	WE = 1'b0;
-	WE = #10000 1'b1;
-	WE = #10000 1'b0;
-	WE = #20000 1'b1;
-	WE = #10000 1'b0;
-	WE = #20000 1'b1;
-	WE = #10000 1'b0;
-	WE = #50000 1'b1;
-	WE = #10000 1'b0;
+	CS = 1'b0;
+	CS = #370000 1'b1;
+	CS = #600000 1'b0;
 end 
 
 // A
@@ -180,64 +201,119 @@ end
 initial
 begin
 	IN_2 = 1'b0;
-	IN_2 = #960000 1'b1;
 end 
 
 // IN_3
 initial
 begin
 	IN_3 = 1'b0;
-	IN_3 = #480000 1'b1;
-	IN_3 = #480000 1'b0;
 end 
 
 // IN_4
 initial
 begin
-	repeat(2)
-	begin
-		IN_4 = 1'b0;
-		IN_4 = #240000 1'b1;
-		# 240000;
-	end
 	IN_4 = 1'b0;
 end 
 
 // IN_5
 initial
 begin
-	repeat(4)
-	begin
-		IN_5 = 1'b0;
-		IN_5 = #120000 1'b1;
-		# 120000;
-	end
 	IN_5 = 1'b0;
 end 
 
 // IN_6
 initial
 begin
-	repeat(8)
-	begin
-		IN_6 = 1'b0;
-		IN_6 = #60000 1'b1;
-		# 60000;
-	end
 	IN_6 = 1'b0;
 end 
 
 // IN_7
 initial
 begin
-	repeat(16)
-	begin
-		IN_7 = 1'b0;
-		IN_7 = #30000 1'b1;
-		# 30000;
-	end
 	IN_7 = 1'b0;
-	IN_7 = #30000 1'b1;
+end 
+
+// _RAM_PROG
+initial
+begin
+	_RAM_PROG = 1'b0;
+	_RAM_PROG = #240000 1'b1;
+end 
+
+// WR_PROG
+initial
+begin
+	WR_PROG = 1'b0;
+	WR_PROG = #100000 1'b1;
+	WR_PROG = #10000 1'b0;
+	WR_PROG = #100000 1'b1;
+	WR_PROG = #10000 1'b0;
+end 
+
+// RAM_PROG_DATA_0
+initial
+begin
+	RAM_PROG_DATA_0 = 1'b0;
+	RAM_PROG_DATA_0 = #90000 1'b1;
+	RAM_PROG_DATA_0 = #30000 1'b0;
+end 
+
+// RAM_PROG_DATA_1
+initial
+begin
+	RAM_PROG_DATA_1 = 1'b0;
+	RAM_PROG_DATA_1 = #90000 1'b1;
+	RAM_PROG_DATA_1 = #30000 1'b0;
+	RAM_PROG_DATA_1 = #80000 1'b1;
+	RAM_PROG_DATA_1 = #30000 1'b0;
+end 
+
+// RAM_PROG_DATA_2
+initial
+begin
+	RAM_PROG_DATA_2 = 1'b0;
+	RAM_PROG_DATA_2 = #90000 1'b1;
+	RAM_PROG_DATA_2 = #30000 1'b0;
+	RAM_PROG_DATA_2 = #80000 1'b1;
+	RAM_PROG_DATA_2 = #30000 1'b0;
+end 
+
+// RAM_PROG_DATA_3
+initial
+begin
+	RAM_PROG_DATA_3 = 1'b0;
+	RAM_PROG_DATA_3 = #90000 1'b1;
+	RAM_PROG_DATA_3 = #30000 1'b0;
+	RAM_PROG_DATA_3 = #80000 1'b1;
+	RAM_PROG_DATA_3 = #30000 1'b0;
+end 
+
+// RAM_PROG_DATA_4
+initial
+begin
+	RAM_PROG_DATA_4 = 1'b0;
+	RAM_PROG_DATA_4 = #200000 1'b1;
+	RAM_PROG_DATA_4 = #30000 1'b0;
+end 
+
+// RAM_PROG_DATA_5
+initial
+begin
+	RAM_PROG_DATA_5 = 1'b0;
+	RAM_PROG_DATA_5 = #200000 1'b1;
+	RAM_PROG_DATA_5 = #30000 1'b0;
+end 
+
+// RAM_PROG_DATA_6
+initial
+begin
+	RAM_PROG_DATA_6 = 1'b0;
+end 
+
+// RAM_PROG_DATA_7
+initial
+begin
+	RAM_PROG_DATA_7 = 1'b0;
 end 
 endmodule
 
