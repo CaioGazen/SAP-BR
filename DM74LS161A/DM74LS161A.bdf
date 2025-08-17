@@ -1876,6 +1876,130 @@ https://fpgasoftware.intel.com/eula.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 1088 408 1120 424)
+	(text "VCC" (rect 2 5 25 16)(font "Arial" (font_size 6)))
+	(text "inst6" (rect 1 -4 29 11)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 5 -4 13 9)(font "Courier New" (bold))(invisible))
+		(line (pt 16 0)(pt 16 8))
+	)
+	(drawing
+		(line (pt 24 8)(pt 8 8))
+	)
+	(rotate180)
+)
+(symbol
+	(rect 1088 312 1120 328)
+	(text "VCC" (rect 7 0 30 11)(font "Arial" (font_size 6)))
+	(text "inst18" (rect 3 5 39 20)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1088 688 1120 704)
+	(text "VCC" (rect 2 5 25 16)(font "Arial" (font_size 6)))
+	(text "inst7" (rect 1 -4 29 11)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 5 -4 13 9)(font "Courier New" (bold))(invisible))
+		(line (pt 16 0)(pt 16 8))
+	)
+	(drawing
+		(line (pt 24 8)(pt 8 8))
+	)
+	(rotate180)
+)
+(symbol
+	(rect 1088 592 1120 608)
+	(text "VCC" (rect 7 0 30 11)(font "Arial" (font_size 6)))
+	(text "inst21" (rect 3 5 39 20)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1088 992 1120 1008)
+	(text "VCC" (rect 2 5 25 16)(font "Arial" (font_size 6)))
+	(text "inst8" (rect 1 -4 29 11)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 5 -4 13 9)(font "Courier New" (bold))(invisible))
+		(line (pt 16 0)(pt 16 8))
+	)
+	(drawing
+		(line (pt 24 8)(pt 8 8))
+	)
+	(rotate180)
+)
+(symbol
+	(rect 1088 896 1120 912)
+	(text "VCC" (rect 7 0 30 11)(font "Arial" (font_size 6)))
+	(text "inst24" (rect 3 5 39 20)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1088 1288 1120 1304)
+	(text "VCC" (rect 2 5 25 16)(font "Arial" (font_size 6)))
+	(text "inst11" (rect 1 -4 37 11)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 5 -4 13 9)(font "Courier New" (bold))(invisible))
+		(line (pt 16 0)(pt 16 8))
+	)
+	(drawing
+		(line (pt 24 8)(pt 8 8))
+	)
+	(rotate180)
+)
+(symbol
+	(rect 1088 1192 1120 1208)
+	(text "VCC" (rect 7 0 30 11)(font "Arial" (font_size 6)))
+	(text "inst28" (rect 3 5 39 20)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 27 20)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(pt 848 288)
 	(pt 848 304)
@@ -2741,14 +2865,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1008 1232)
 )
 (connector
-	(pt 992 368)
-	(pt 1072 368)
-)
-(connector
-	(pt 216 368)
-	(pt 992 368)
-)
-(connector
 	(pt 968 1704)
 	(pt 960 1704)
 )
@@ -2952,7 +3068,14 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1032 1664)
 	(pt 1264 1664)
 )
-(junction (pt 992 368))
+(connector
+	(pt 992 368)
+	(pt 1072 368)
+)
+(connector
+	(pt 216 368)
+	(pt 992 368)
+)
 (junction (pt 992 648))
 (junction (pt 744 720))
 (junction (pt 744 576))
@@ -3006,3 +3129,4 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 1216 352))
 (junction (pt 1160 1232))
 (junction (pt 1224 1232))
+(junction (pt 992 368))
