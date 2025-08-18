@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Aug 17 18:55:39 2025
+Analysis & Synthesis Status : Successful - Sun Aug 17 21:57:38 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : rafaelAula2
 Top-level Entity Name : SAP_BR
 Family : MAX 10
-Total logic elements : 601
-    Total combinational functions : 453
+Total logic elements : 600
+    Total combinational functions : 452
     Dedicated logic registers : 171
 Total registers : 171
-Total pins : 75
+Total pins : 62
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

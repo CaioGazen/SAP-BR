@@ -92,21 +92,21 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A21       :        :                   :         : 6         :                
 GND                          : A22       : gnd    :                   :         :           :                
-MAR_ADDR_1                   : AA1       : output : 2.5 V             :         : 3         : N              
-MAR_ADDR_2                   : AA2       : output : 2.5 V             :         : 3         : N              
-ACC_OUT                      : AA3       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA1       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA2       :        :                   :         : 3         :                
+A_OUT_1                      : AA3       : output : 2.5 V             :         : 3         : N              
 GND                          : AA4       : gnd    :                   :         :           :                
-BR_IN                        : AA5       : output : 2.5 V             :         : 3         : N              
-BUS_1                        : AA6       : output : 2.5 V             :         : 3         : N              
-B_OUT_2                      : AA7       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA10      :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA11      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4         :                
+JMP                          : AA5       : output : 2.5 V             :         : 3         : N              
+RAM_PROG_6                   : AA6       : input  : 2.5 V             :         : 3         : N              
+PROG                         : AA7       : input  : 2.5 V             :         : 3         : N              
+OR_OUT_7                     : AA8       : output : 2.5 V             :         : 3         : N              
+MAR_ADDR_PROG_0              : AA9       : input  : 2.5 V             :         : 3         : N              
+MAR_ADDR_2                   : AA10      : output : 2.5 V             :         : 3         : N              
+A_OUT_7                      : AA11      : output : 2.5 V             :         : 4         : N              
+B_OUT_5                      : AA12      : output : 2.5 V             :         : 4         : N              
+NOT                          : AA13      : output : 2.5 V             :         : 4         : N              
+ACC_IN                       : AA14      : output : 2.5 V             :         : 4         : N              
+OR_OUT_2                     : AA15      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA17      :        :                   :         : 4         :                
 GND                          : AA18      : gnd    :                   :         :           :                
@@ -115,21 +115,21 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
 GND                          : AB1       : gnd    :                   :         :           :                
-IR_2                         : AB2       : output : 2.5 V             :         : 3         : N              
-MAR_ADDR_PROG_2              : AB3       : input  : 2.5 V             :         : 3         : N              
-NOT                          : AB4       : output : 2.5 V             :         : 3         : N              
-BUS_3                        : AB5       : output : 2.5 V             :         : 3         : N              
-A_OUT_0                      : AB6       : output : 2.5 V             :         : 3         : N              
-BUS_2                        : AB7       : output : 2.5 V             :         : 3         : N              
-B_OUT_5                      : AB8       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB14      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 4         :                
+MAR_ADDR_PROG_1              : AB2       : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 3         :                
+IR_OUT                       : AB4       : output : 2.5 V             :         : 3         : N              
+RAM_PROG_1                   : AB5       : input  : 2.5 V             :         : 3         : N              
+B_OUT_1                      : AB6       : output : 2.5 V             :         : 3         : N              
+MAR_ADDR_1                   : AB7       : output : 2.5 V             :         : 3         : N              
+A_OUT_6                      : AB8       : output : 2.5 V             :         : 3         : N              
+MAR_ADDR_3                   : AB9       : output : 2.5 V             :         : 3         : N              
+B_OUT_3                      : AB10      : output : 2.5 V             :         : 4         : N              
+B_OUT_0                      : AB11      : output : 2.5 V             :         : 4         : N              
+RAM_PROG_5                   : AB12      : input  : 2.5 V             :         : 4         : N              
+CLOCK                        : AB13      : input  : 2.5 V             :         : 4         : N              
+BR_IN                        : AB14      : output : 2.5 V             :         : 4         : N              
+IR_IN                        : AB15      : output : 2.5 V             :         : 4         : N              
+A_OUT_5                      : AB16      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB19      :        :                   :         : 4         :                
@@ -142,7 +142,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+MAR_ADDR_PROG_2              : B7        : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
@@ -211,7 +211,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :      
 GND                          : E7        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+WR_PROG                      : E10       : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
@@ -356,15 +356,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : L19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : L20       :        :                   :         : 6         :                
 GND                          : L21       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 5         :                
-PC_OUT                       : M1        : output : 2.5 V             :         : 2         : N              
-OR_OUT_3                     : M2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 1B        :                
 ~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
 VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
 GND                          : M7        : gnd    :                   :         :           :                
 BTN_RST                      : M8        : input  : 2.5 V             :         : 2         : N              
-B_OUT_6                      : M9        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 2         :                
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.2V    :           :                
 VCC                          : M12       : power  :                   : 1.2V    :           :                
@@ -378,15 +378,15 @@ GND                          : M19       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : M20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 5         :                
-B_OUT_1                      : N1        : output : 2.5 V             :         : 2         : N              
-IR_IN                        : N2        : output : 2.5 V             :         : 2         : N              
-PC_INC                       : N3        : output : 2.5 V             :         : 2         : N              
-B_OUT_3                      : N4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 2         :                
 VCCIO2                       : N6        : power  :                   : 2.5V    : 2         :                
 VCCIO2                       : N7        : power  :                   : 2.5V    : 2         :                
-BUS_4                        : N8        : output : 2.5 V             :         : 2         : N              
-BUS_5                        : N9        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 2         :                
 VCC                          : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 VCC                          : N12       : power  :                   : 1.2V    :           :                
@@ -400,19 +400,19 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : N20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N22       :        :                   :         : 5         :                
-BUS_7                        : P1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
 GND                          : P2        : gnd    :                   :         :           :                
-OR_OUT_0                     : P3        : output : 2.5 V             :         : 2         : N              
-RAM_PROG_7                   : P4        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P5        :        :                   :         : 2         :                
 GND                          : P6        : gnd    :                   :         :           :                
 VCCIO2                       : P7        : power  :                   : 2.5V    : 2         :                
-RAM_PROG_4                   : P8        : input  : 2.5 V             :         : 2         : N              
-B_OUT_7                      : P9        : output : 2.5 V             :         : 3         : N              
-AL_1                         : P10       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : P11       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P13       :        :                   :         : 4         :                
+RAM_PROG_0                   : P8        : input  : 2.5 V             :         : 2         : N              
+AL_1                         : P9        : output : 2.5 V             :         : 3         : N              
+A_OUT_4                      : P10       : output : 2.5 V             :         : 3         : N              
+RAM_PROG_3                   : P11       : input  : 2.5 V             :         : 3         : N              
+B_OUT_6                      : P12       : output : 2.5 V             :         : 4         : N              
+A_OUT_3                      : P13       : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
 VCCIO5                       : P16       : power  :                   : 2.5V    : 5         :                
@@ -422,19 +422,19 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : P19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : P20       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P22       :        :                   :         : 5         :                
-ALU_OUT                      : R1        : output : 2.5 V             :         : 2         : N              
-SUB                          : R2        : output : 2.5 V             :         : 2         : N              
-OPR_IN                       : R3        : output : 2.5 V             :         : 2         : N              
-A_OUT_4                      : R4        : output : 2.5 V             :         : 2         : N              
-B_OUT_4                      : R5        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
 VCCIO2                       : R6        : power  :                   : 2.5V    : 2         :                
-RAM_PROG_6                   : R7        : input  : 2.5 V             :         : 2         : N              
+MAR_IN                       : R7        : output : 2.5 V             :         : 2         : N              
 VCCA1                        : R8        : power  :                   : 2.5V    :           :                
-A_OUT_7                      : R9        : output : 2.5 V             :         : 3         : N              
-MAR_ADDR_PROG                : R10       : input  : 2.5 V             :         : 3         : N              
-A_OUT_6                      : R11       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3         :                
+PC_OUT                       : R10       : output : 2.5 V             :         : 3         : N              
+OR_OUT_3                     : R11       : output : 2.5 V             :         : 3         : N              
+ACC_OUT                      : R12       : output : 2.5 V             :         : 4         : N              
+OR_OUT_5                     : R13       : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 5         :                
 VCCIO5                       : R16       : power  :                   : 2.5V    : 5         :                
@@ -444,12 +444,12 @@ GND                          : R19       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : R20       :        :                   :         : 5         :                
 GND                          : R21       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5         :                
-OR_OUT_1                     : T1        : output : 2.5 V             :         : 2         : N              
-A_OUT_1                      : T2        : output : 2.5 V             :         : 2         : N              
-OR_OUT_2                     : T3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
 GND                          : T4        : gnd    :                   :         :           :                
-IR_OUT                       : T5        : output : 2.5 V             :         : 2         : N              
-MAR_ADDR_PROG_3              : T6        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 2         :                
 VCCD_PLL1                    : T7        : power  :                   : 1.2V    :           :                
 GND                          : T8        : gnd    :                   :         :           :                
 VCCIO3                       : T9        : power  :                   : 2.5V    : 3         :                
@@ -466,13 +466,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5         :                
-RAM_PROG_1                   : U1        : input  : 2.5 V             :         : 2         : N              
-OR_OUT_6                     : U2        : output : 2.5 V             :         : 2         : N              
-ACC_IN                       : U3        : output : 2.5 V             :         : 2         : N              
-OR_OUT_7                     : U4        : output : 2.5 V             :         : 2         : N              
-MAR_IN                       : U5        : output : 2.5 V             :         : 2         : N              
-A_OUT_3                      : U6        : output : 2.5 V             :         : 3         : N              
-MAR_ADDR_3                   : U7        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 3         :                
 VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
 VCCIO3                       : U9        : power  :                   : 2.5V    : 3         :                
 GND                          : U10       : gnd    :                   :         :           :                
@@ -488,20 +488,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U22       :        :                   :         : 5         :                
-OR_OUT_4                     : V1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
 GND                          : V2        : gnd    :                   :         :           :                
-JMP                          : V3        : output : 2.5 V             :         : 2         : N              
-MAR_ADDR_PROG_1              : V4        : input  : 2.5 V             :         : 3         : N              
-MAR_ADDR_PROG_0              : V5        : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 3         :                
+OR_OUT_6                     : V5        : output : 2.5 V             :         : 3         : N              
 GND                          : V6        : gnd    :                   :         :           :                
-RAM_IN                       : V7        : output : 2.5 V             :         : 3         : N              
-AL_0                         : V8        : output : 2.5 V             :         : 3         : N              
-WR_PROG                      : V9        : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 4         :                
+B_OUT_2                      : V7        : output : 2.5 V             :         : 3         : N              
+RAM_PROG_4                   : V8        : input  : 2.5 V             :         : 3         : N              
+MAR_ADDR_PROG_3              : V9        : input  : 2.5 V             :         : 3         : N              
+RAM_PROG_7                   : V10       : input  : 2.5 V             :         : 3         : N              
+SUB                          : V11       : output : 2.5 V             :         : 4         : N              
+AL_0                         : V12       : output : 2.5 V             :         : 4         : N              
+OPR_IN                       : V13       : output : 2.5 V             :         : 4         : N              
+A_OUT_2                      : V14       : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V16       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 4         :                
@@ -510,21 +510,21 @@ GND                          : V19       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
-A_OUT_5                      : W1        : output : 2.5 V             :         : 2         : N              
-BUS_6                        : W2        : output : 2.5 V             :         : 2         : N              
-CLOCK                        : W3        : input  : 2.5 V             :         : 3         : N              
-HLT                          : W4        : input  : 2.5 V             :         : 3         : N              
-OR_OUT_5                     : W5        : output : 2.5 V             :         : 3         : N              
-MAR_ADDR_0                   : W6        : output : 2.5 V             :         : 3         : N              
-RAM_PROG_5                   : W7        : input  : 2.5 V             :         : 3         : N              
-A_OUT_2                      : W8        : output : 2.5 V             :         : 3         : N              
-IR_1                         : W9        : output : 2.5 V             :         : 3         : N              
-B_OUT_0                      : W10       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W13       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
+RAM_IN                       : W2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W7        :        :                   :         : 3         :                
+B_OUT_4                      : W8        : output : 2.5 V             :         : 3         : N              
+ALU_OUT                      : W9        : output : 2.5 V             :         : 3         : N              
+A_OUT_0                      : W10       : output : 2.5 V             :         : 3         : N              
+B_OUT_7                      : W11       : output : 2.5 V             :         : 4         : N              
+OR_OUT_4                     : W12       : output : 2.5 V             :         : 4         : N              
+OR_OUT_0                     : W13       : output : 2.5 V             :         : 4         : N              
+OR_OUT_1                     : W14       : output : 2.5 V             :         : 4         : N              
+RAM_PROG_2                   : W15       : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W18       :        :                   :         : 4         :                
@@ -532,20 +532,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5         :                
 GND                          : W21       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5         :                
-RAM_PROG_2                   : Y1        : input  : 2.5 V             :         : 3         : N              
-RAM_PROG_3                   : Y2        : input  : 2.5 V             :         : 3         : N              
-IR_3                         : Y3        : output : 2.5 V             :         : 3         : N              
-BUS_0                        : Y4        : output : 2.5 V             :         : 3         : N              
-RAM_PROG                     : Y5        : input  : 2.5 V             :         : 3         : N              
-RAM_PROG_0                   : Y6        : input  : 2.5 V             :         : 3         : N              
-RAM_OUT                      : Y7        : output : 2.5 V             :         : 3         : N              
-IR_0                         : Y8        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y2        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y8        :        :                   :         : 3         :                
 GND                          : Y9        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y11       :        :                   :         : 4         :                
+MAR_ADDR_0                   : Y10       : output : 2.5 V             :         : 3         : N              
+HLT                          : Y11       : input  : 2.5 V             :         : 4         : N              
 GND                          : Y12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 4         :                
+PC_INC                       : Y13       : output : 2.5 V             :         : 4         : N              
+RAM_OUT                      : Y14       : output : 2.5 V             :         : 4         : N              
 GND                          : Y15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 4         :                

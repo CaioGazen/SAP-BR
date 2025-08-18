@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/17/2025 18:56:11"
+// Generated on "08/17/2025 21:58:33"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          SAP_BR
 // 
@@ -33,12 +33,11 @@ module SAP_BR_vlg_vec_tst();
 reg BTN_RST;
 reg CLOCK;
 reg HLT;
-reg MAR_ADDR_PROG;
 reg MAR_ADDR_PROG_0;
 reg MAR_ADDR_PROG_1;
 reg MAR_ADDR_PROG_2;
 reg MAR_ADDR_PROG_3;
-reg RAM_PROG;
+reg PROG;
 reg RAM_PROG_0;
 reg RAM_PROG_1;
 reg RAM_PROG_2;
@@ -71,18 +70,6 @@ wire B_OUT_5;
 wire B_OUT_6;
 wire B_OUT_7;
 wire BR_IN;
-wire BUS_0;
-wire BUS_1;
-wire BUS_2;
-wire BUS_3;
-wire BUS_4;
-wire BUS_5;
-wire BUS_6;
-wire BUS_7;
-wire IR_0;
-wire IR_1;
-wire IR_2;
-wire IR_3;
 wire IR_IN;
 wire IR_OUT;
 wire JMP;
@@ -133,20 +120,8 @@ SAP_BR i1 (
 	.B_OUT_7(B_OUT_7),
 	.BR_IN(BR_IN),
 	.BTN_RST(BTN_RST),
-	.BUS_0(BUS_0),
-	.BUS_1(BUS_1),
-	.BUS_2(BUS_2),
-	.BUS_3(BUS_3),
-	.BUS_4(BUS_4),
-	.BUS_5(BUS_5),
-	.BUS_6(BUS_6),
-	.BUS_7(BUS_7),
 	.CLOCK(CLOCK),
 	.HLT(HLT),
-	.IR_0(IR_0),
-	.IR_1(IR_1),
-	.IR_2(IR_2),
-	.IR_3(IR_3),
 	.IR_IN(IR_IN),
 	.IR_OUT(IR_OUT),
 	.JMP(JMP),
@@ -154,7 +129,6 @@ SAP_BR i1 (
 	.MAR_ADDR_1(MAR_ADDR_1),
 	.MAR_ADDR_2(MAR_ADDR_2),
 	.MAR_ADDR_3(MAR_ADDR_3),
-	.MAR_ADDR_PROG(MAR_ADDR_PROG),
 	.MAR_ADDR_PROG_0(MAR_ADDR_PROG_0),
 	.MAR_ADDR_PROG_1(MAR_ADDR_PROG_1),
 	.MAR_ADDR_PROG_2(MAR_ADDR_PROG_2),
@@ -172,9 +146,9 @@ SAP_BR i1 (
 	.OR_OUT_7(OR_OUT_7),
 	.PC_INC(PC_INC),
 	.PC_OUT(PC_OUT),
+	.PROG(PROG),
 	.RAM_IN(RAM_IN),
 	.RAM_OUT(RAM_OUT),
-	.RAM_PROG(RAM_PROG),
 	.RAM_PROG_0(RAM_PROG_0),
 	.RAM_PROG_1(RAM_PROG_1),
 	.RAM_PROG_2(RAM_PROG_2),
@@ -211,20 +185,11 @@ begin
 	HLT = 1'b0;
 end 
 
-// RAM_PROG
+// PROG
 initial
 begin
-	RAM_PROG = 1'b0;
-	RAM_PROG = #360000 1'b1;
-	RAM_PROG = #39639000 1'b0;
-end 
-
-// MAR_ADDR_PROG
-initial
-begin
-	MAR_ADDR_PROG = 1'b0;
-	MAR_ADDR_PROG = #360000 1'b1;
-	MAR_ADDR_PROG = #39639000 1'b0;
+	PROG = 1'b1;
+	PROG = #360000 1'b0;
 end 
 
 // WR_PROG
