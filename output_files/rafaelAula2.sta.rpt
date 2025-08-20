@@ -1,5 +1,5 @@
 Timing Analyzer report for rafaelAula2
-Sun Aug 17 21:57:57 2025
+Wed Aug 20 15:23:29 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -89,18 +89,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.78        ;
-; Maximum used               ; 12          ;
+; Average used               ; 1.22        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.6%      ;
-;     Processor 3            ;   7.3%      ;
-;     Processor 4            ;   7.2%      ;
-;     Processors 5-12        ;   7.0%      ;
+;     Processor 2            ;  21.9%      ;
 +----------------------------+-------------+
 
 
@@ -128,7 +125,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+-------------------+
 ; Clock ; Slack   ; End Point TNS     ;
 +-------+---------+-------------------+
-; CLOCK ; -13.052 ; -1916.546         ;
+; CLOCK ; -13.052 ; -1915.929         ;
 +-------+---------+-------------------+
 
 
@@ -183,7 +180,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+------------------+
 ; Clock ; Slack   ; End Point TNS    ;
 +-------+---------+------------------+
-; CLOCK ; -11.943 ; -1749.928        ;
+; CLOCK ; -11.943 ; -1749.384        ;
 +-------+---------+------------------+
 
 
@@ -192,7 +189,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; CLOCK ; 0.868 ; 0.000             ;
+; CLOCK ; 0.879 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -228,7 +225,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; CLOCK ; -5.623 ; -832.276          ;
+; CLOCK ; -5.623 ; -832.027          ;
 +-------+--------+-------------------+
 
 
@@ -258,7 +255,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; CLOCK ; -3.000 ; -246.122                        ;
+; CLOCK ; -3.000 ; -246.182                        ;
 +-------+--------+---------------------------------+
 
 
@@ -275,8 +272,8 @@ No synchronizer chains to report.
 +------------------+-----------+-------+----------+---------+---------------------+
 ; Worst-case Slack ; -13.052   ; 0.337 ; N/A      ; N/A     ; -3.000              ;
 ;  CLOCK           ; -13.052   ; 0.337 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -1916.546 ; 0.0   ; 0.0      ; 0.0     ; -246.122            ;
-;  CLOCK           ; -1916.546 ; 0.000 ; N/A      ; N/A     ; -246.122            ;
+; Design-wide TNS  ; -1915.929 ; 0.0   ; 0.0      ; 0.0     ; -246.182            ;
+;  CLOCK           ; -1915.929 ; 0.000 ; N/A      ; N/A     ; -246.182            ;
 +------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -743,10 +740,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Aug 17 21:57:55 2025
+    Info: Processing started: Wed Aug 20 15:23:25 2025
 Info: Command: quartus_sta rafaelAula2 -c rafaelAula2
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'rafaelAula2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -762,7 +759,7 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case setup slack is -13.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.052           -1916.546 CLOCK 
+    Info (332119):   -13.052           -1915.929 CLOCK 
 Info (332146): Worst-case hold slack is 1.004
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -781,11 +778,11 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case setup slack is -11.943
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.943           -1749.928 CLOCK 
-Info (332146): Worst-case hold slack is 0.868
+    Info (332119):   -11.943           -1749.384 CLOCK 
+Info (332146): Worst-case hold slack is 0.879
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.868               0.000 CLOCK 
+    Info (332119):     0.879               0.000 CLOCK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -798,7 +795,7 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case setup slack is -5.623
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.623            -832.276 CLOCK 
+    Info (332119):    -5.623            -832.027 CLOCK 
 Info (332146): Worst-case hold slack is 0.337
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -808,13 +805,13 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -246.122 CLOCK 
+    Info (332119):    -3.000            -246.182 CLOCK 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 627 megabytes
-    Info: Processing ended: Sun Aug 17 21:57:57 2025
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 485 megabytes
+    Info: Processing ended: Wed Aug 20 15:23:29 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

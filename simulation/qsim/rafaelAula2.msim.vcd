@@ -3,7 +3,7 @@ $comment
 		vcd file rafaelAula2.msim.vcd -direction
 $end
 $date
-	Sun Aug 17 21:58:35 2025
+	Wed Aug 20 15:25:10 2025
 $end
 $version
 	ModelSim Version 2020.1
